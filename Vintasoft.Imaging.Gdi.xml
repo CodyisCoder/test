@@ -1,0 +1,3030 @@
+﻿<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Vintasoft.Imaging.Gdi</name>
+    </assembly>
+    <members>
+        <member name="T:Vintasoft.Imaging.Codecs.Decoders.EmfDecoder">
+            <summary>
+            Defines a decoder for EMF images.
+            </summary>
+        </member>
+        <member name="M:Vintasoft.Imaging.Codecs.Decoders.EmfDecoder.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Vintasoft.Imaging.Codecs.Decoders.EmfDecoder" /> class.
+            </summary>
+            <remarks>
+            This constructor is used in <see cref="T:Vintasoft.Imaging.Codecs.Decoders.AvailableDecoders" /> and
+            should not be used in real applications.
+            </remarks>
+        </member>
+        <member name="M:Vintasoft.Imaging.Codecs.Decoders.EmfDecoder.#ctor(System.IO.Stream)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Vintasoft.Imaging.Codecs.Decoders.EmfDecoder" /> class.
+            </summary>
+            <param name="stream">Stream with the image.</param>
+        </member>
+        <member name="P:Vintasoft.Imaging.Codecs.Decoders.EmfDecoder.Name">
+            <summary>
+            Gets the name of the decoder.
+            </summary>
+        </member>
+        <member name="M:Vintasoft.Imaging.Codecs.Decoders.EmfDecoder.IsValidFormat(System.IO.Stream)">
+            <summary>
+            Determines that stream contains EMF file.
+            </summary>
+            <param name="stream">Stream with binary data of EMF file.</param>
+            <returns>
+            <b>True</b> if stream contains EMF file; otherwise, <b>false</b>.
+            </returns>
+        </member>
+        <member name="M:Vintasoft.Imaging.Codecs.Decoders.EmfDecoder.GetImageInfo(System.Int32,Vintasoft.Imaging.Codecs.Decoders.RenderingSettings,Vintasoft.Imaging.Codecs.Decoders.DecodingSettings)">
+            <summary>
+            Returns information about EMF image.
+            </summary>
+            <param name="pageIndex">The zero based page index.
+            This parameter is not used and can be set to 0.</param>
+            <param name="renderingSettings">Rendering settings used for getting info about
+            the image of page. This parameter is not used and can be set to <b>null</b>.</param>
+            <param name="decodingSettings">decoding settings used for getting info about
+            the image of page.</param>
+            <returns>Information about EMF image.</returns>
+        </member>
+        <member name="M:Vintasoft.Imaging.Codecs.Decoders.EmfDecoder.GetImage(System.Int32,Vintasoft.Imaging.Codecs.Decoders.DecodingSettings,Vintasoft.Imaging.Codecs.Decoders.RenderingSettings,System.EventHandler{Vintasoft.Imaging.ProgressEventArgs})">
+            <summary>
+            Returns an image associated with the specified page of EMF file.
+            </summary>
+            <param name="pageIndex">The zero based page index.
+            This parameter is not used and can be set to 0.</param>
+            <param name="decodingSettings">The decoding settings that should be used for decoding of page image.</param>
+            <param name="renderingSettings">Rendering settings used for getting info about
+            the image of page. This parameter is not used and can be set to <b>null</b>.</param>
+            <param name="progressDelegate">Progress delegate.</param>
+            <returns>Image of EMF file.</returns>
+        </member>
+        <member name="M:Vintasoft.Imaging.Codecs.Decoders.EmfDecoder.GetPageMetadata(System.Int32)">
+            <summary>
+            Returns a metadata of EMF file.
+            </summary>
+            <param name="pageIndex">The zero based page index.
+            This parameter is not used and can be set to 0.</param>
+            <returns>Metadata of EMF file.</returns>
+        </member>
+        <member name="T:Vintasoft.Imaging.Codecs.Decoders.WmfDecoder">
+            <summary>
+            Defines a decoder for WMF images.
+            </summary>
+        </member>
+        <member name="M:Vintasoft.Imaging.Codecs.Decoders.WmfDecoder.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Vintasoft.Imaging.Codecs.Decoders.WmfDecoder" /> class.
+            </summary>
+            <remarks>
+            This constructor is used in <see cref="T:Vintasoft.Imaging.Codecs.Decoders.AvailableDecoders" /> and
+            should not be used in real applications.
+            </remarks>
+        </member>
+        <member name="M:Vintasoft.Imaging.Codecs.Decoders.WmfDecoder.#ctor(System.IO.Stream)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Vintasoft.Imaging.Codecs.Decoders.WmfDecoder" /> class.
+            </summary>
+            <param name="stream">Stream with the image.</param>
+        </member>
+        <member name="P:Vintasoft.Imaging.Codecs.Decoders.WmfDecoder.Name">
+            <summary>
+            Gets the name of the decoder.
+            </summary>
+        </member>
+        <member name="P:Vintasoft.Imaging.Codecs.Decoders.WmfDecoder.IsVectorDecoder">
+            <summary>
+            Gets a value indicating whether the decoder is a vector decoder.
+            </summary>
+            <value>
+            Always return <b>True</b>.
+            </value>
+        </member>
+        <member name="M:Vintasoft.Imaging.Codecs.Decoders.WmfDecoder.IsValidFormat(System.IO.Stream)">
+            <summary>
+            Determines that stream contains WMF file.
+            </summary>
+            <param name="stream">Stream with binary data of WMF file.</param>
+            <returns>
+            <b>True</b> if stream contains WMF file; otherwise, <b>false</b>.
+            </returns>
+        </member>
+        <member name="M:Vintasoft.Imaging.Codecs.Decoders.WmfDecoder.GetImageInfo(System.Int32,Vintasoft.Imaging.Codecs.Decoders.RenderingSettings,Vintasoft.Imaging.Codecs.Decoders.DecodingSettings)">
+            <summary>
+            Returns information about WMF image.
+            </summary>
+            <param name="pageIndex">The zero based page index.
+            This parameter is not used and can be set to 0.</param>
+            <param name="renderingSettings">Rendering settings used for getting info about
+            the image of page. This parameter is not used and can be set to <b>null</b>.</param>
+            <param name="decodingSettings">decoding settings used for getting info about
+            the image of page.</param>
+            <returns>Information about WMF image.</returns>
+        </member>
+        <member name="M:Vintasoft.Imaging.Codecs.Decoders.WmfDecoder.GetImage(System.Int32,Vintasoft.Imaging.Codecs.Decoders.DecodingSettings,Vintasoft.Imaging.Codecs.Decoders.RenderingSettings,System.EventHandler{Vintasoft.Imaging.ProgressEventArgs})">
+            <summary>
+            Returns an image associated with the specified page of WMF file.
+            </summary>
+            <param name="pageIndex">The zero based page index.
+            This parameter is not used and can be set to 0.</param>
+            <param name="decodingSettings">The decoding settings that should be used for decoding of page image.</param>
+            <param name="renderingSettings">Rendering settings used for getting info about
+            the image of page. This parameter is not used and can be set to <b>null</b>.</param>
+            <param name="progressDelegate">Progress delegate.</param>
+            <returns>Image of WMF file.</returns>
+        </member>
+        <member name="M:Vintasoft.Imaging.Codecs.Decoders.WmfDecoder.CanUseVectorRendering(System.Int32,Vintasoft.Imaging.Codecs.Decoders.DecodingSettings,Vintasoft.Imaging.Codecs.Decoders.RenderingSettings)">
+            <summary>
+            Returns a value indicating whether the vector rendering can be used.
+            </summary>
+            <param name="pageIndex">The zero based index of page.</param>
+            <param name="decodingSettings">Decoding settings.</param>
+            <param name="renderingSettings">Rendering settings.</param>
+            <returns>
+            <b>True</b> if the vector rendering can be used; otherwise, <b>false</b>.
+            </returns>
+        </member>
+        <member name="M:Vintasoft.Imaging.Codecs.Decoders.WmfDecoder.GetImage(System.Int32,System.Drawing.RectangleF,System.Single,Vintasoft.Imaging.Codecs.Decoders.DecodingSettings,Vintasoft.Imaging.Codecs.Decoders.RenderingSettings,System.EventHandler{Vintasoft.Imaging.ProgressEventArgs},System.EventHandler{Vintasoft.Imaging.ImageRendering.IntermediateImageRequestEventArgs})">
+            <summary>
+            Returns a scaled rectangle of vector image.
+            </summary>
+            <param name="pageIndex">The zero based page index.</param>
+            <param name="rect">Rectangle on source image.</param>
+            <param name="scale">Scale factor.</param>
+            <param name="decodingSettings">Decoding settings.</param>
+            <param name="renderingSettings">Rendering settings.</param>
+            <param name="imageRenderingProgress">Delegate of the image loading progress.
+            Can be set to <b>null</b> (<b>Nothing</b> in Visual Basic).</param>
+            <param name="intermediateImageRequest">Delegate for requesting intermediate image.
+            Can be set to <b>null</b> (<b>Nothing</b> in Visual Basic)</param>
+            <returns>Scaled rectangle of vector image.</returns>
+        </member>
+        <member name="M:Vintasoft.Imaging.Codecs.Decoders.WmfDecoder.GetPageMetadata(System.Int32)">
+            <summary>
+            Returns a metadata of WMF file.
+            </summary>
+            <param name="pageIndex">The zero based page index.
+            This parameter is not used and can be set to 0.</param>
+            <returns>Metadata of WMF file.</returns>
+        </member>
+        <member name="M:Vintasoft.Imaging.Codecs.Decoders.WmfDecoder.Dispose(System.Boolean)">
+            <summary>
+            Releases the unmanaged resources used by the <see cref="T:Vintasoft.Imaging.Codecs.Decoders.DecoderBase" />
+            and optionally releases the managed resources. 
+            </summary>
+            <param name="disposing">A value indicating whether to release both managed and unmanaged resources.
+            <b>True</b> to release both managed and unmanaged resources; <b>false</b> to release only unmanaged resources.</param>
+        </member>
+        <member name="T:Vintasoft.Imaging.Codecs.ImageFiles.Jpeg.JpegFileGdiExtensions">
+            <summary>
+            Provides GDI extensions for <see cref="T:Vintasoft.Imaging.Codecs.ImageFiles.Jpeg.JpegFile" /> class.
+            </summary>
+        </member>
+        <member name="M:Vintasoft.Imaging.Codecs.ImageFiles.Jpeg.JpegFileGdiExtensions.SaveWithLosslessRotation(Vintasoft.Imaging.Codecs.ImageFiles.Jpeg.JpegFile,Vintasoft.Imaging.ImageProcessing.Transforms.ImageRotateFlipType,System.IO.Stream)">
+            <summary>
+            Rotates JPEG image without quality loss and saves rotated JPEG image into specified stream.
+            Method can rotate an image if image width and height are multiples of 16.
+            </summary>
+            <param name="jpegFile">Th JPEG file.</param>
+            <param name="rotateFlip">The direction of rotation or flip. Supported values:
+            RotateNoneFlipNone, Rotate90FlipNone, Rotate180FlipNone, Rotate270FlipNone,
+            RotateNoneFlipX, RotateNoneFlipY and equivalents.
+            </param>
+            <param name="stream">Stream to save the image file.</param>
+            <exception cref="T:System.ArgumentNullException">Thrown if
+            <i>stream</i> is <b>null</b>.</exception>
+            <exception cref="T:System.NotSupportedException">Thrown if
+            image width or height are not multiples of 16 <b>OR</b>
+            <b>rotateFlip</b> specifies unsupported direction of rotation/flip <b>OR</b>
+            system JPEG encoder is not found.
+            </exception>
+        </member>
+        <member name="T:Vintasoft.Imaging.Drawing.Gdi.GdiBrush">
+            <summary>
+            Defines the <b>abstract</b> base class of drawing brush based on <see cref="T:System.Drawing.Brush" /> that used to fill the interiors of graphical 
+            shapes such as rectangles, ellipses, pies, polygons, and paths.
+            </summary>
+        </member>
+        <member name="P:Vintasoft.Imaging.Drawing.Gdi.GdiBrush.Source">
+            <summary>
+            Gets the source object of this brush.
+            </summary>
+        </member>
+        <member name="P:Vintasoft.Imaging.Drawing.Gdi.GdiBrush.IsDrawnInDeviceSpace">
+            <summary>
+            Gets or sets a value indicating whether this brush is used in device space.
+            </summary>
+            <value>
+            <b>True</b> - if this brush is used in device space;
+            <b>false</b> - if this brush is used in world space;
+            </value>
+        </member>
+        <member name="M:Vintasoft.Imaging.Drawing.Gdi.GdiBrush.Clone">
+            <summary>
+            Creates a new brush that is a copy of the current instance.
+            </summary>
+            <returns>A new brush that is a copy of this
+            instance.</returns>
+        </member>
+        <member name="M:Vintasoft.Imaging.Drawing.Gdi.GdiBrush.CopyTo(System.Object)">
+            <summary>
+            Copies current <see cref="T:Vintasoft.Imaging.Drawing.Gdi.GdiBrush" /> to the target <see cref="T:Vintasoft.Imaging.Drawing.Gdi.GdiBrush" />.
+            </summary>
+            <param name="obj"><see cref="T:Vintasoft.Imaging.Drawing.Gdi.GdiBrush" /> to copy.</param>
+        </member>
+        <member name="M:Vintasoft.Imaging.Drawing.Gdi.GdiBrush.GetHashCode">
+            <summary>
+            Returns a hash code for this instance.
+            </summary>
+            <returns>
+            A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table. 
+            </returns>
+        </member>
+        <member name="M:Vintasoft.Imaging.Drawing.Gdi.GdiBrush.Equals(System.Object)">
+            <summary>
+            Determines whether the specified <see cref="T:System.Object" />, is equal to this instance.
+            </summary>
+            <param name="obj">The <see cref="T:System.Object" /> to compare with this instance.</param>
+            <returns>
+            <b>True</b> if the specified <see cref="T:System.Object" /> is equal to this instance; otherwise, <b>false</b>.
+            </returns>
+        </member>
+        <member name="M:Vintasoft.Imaging.Drawing.Gdi.GdiBrush.Dispose">
+            <summary>
+            Releases all resources used by this <see cref="T:Vintasoft.Imaging.Drawing.Gdi.GdiBrush" /> object.
+            </summary>
+        </member>
+        <member name="T:Vintasoft.Imaging.Drawing.Gdi.GdiFont">
+            <summary>
+            Defines the font, which is based on <see cref="T:System.Drawing.Font" />.
+            </summary>  
+        </member>
+        <member name="M:Vintasoft.Imaging.Drawing.Gdi.GdiFont.#ctor(System.String,System.Single,System.Boolean,System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Vintasoft.Imaging.Drawing.Gdi.GdiFont" /> class.
+            </summary>
+            <param name="name">The name of the font.</param>
+            <param name="size">The size of the font.</param>
+            <param name="isBold">A value indicating whether font is bold.</param>
+            <param name="isItalic">A value indicating whether font is italic.</param>
+        </member>
+        <member name="M:Vintasoft.Imaging.Drawing.Gdi.GdiFont.#ctor(System.Drawing.Font,System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Vintasoft.Imaging.Drawing.Gdi.GdiFont" /> class.
+            </summary>
+            <param name="source">The source.</param>
+            <param name="disposeSourceAfterUse">A value indicating whether <paramref name="source" /> must be disposed after use.</param>
+        </member>
+        <member name="M:Vintasoft.Imaging.Drawing.Gdi.GdiFont.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Vintasoft.Imaging.Drawing.Gdi.GdiFont" /> class.
+            </summary>
+        </member>
+        <member name="P:Vintasoft.Imaging.Drawing.Gdi.GdiFont.IsSystemFont">
+            <summary>
+            Gets a value indicating whether this font is system font.
+            </summary>
+            <value>
+            <b>True</b> if this font is system font; otherwise, <b>false</b>.
+            </value>
+        </member>
+        <member name="P:Vintasoft.Imaging.Drawing.Gdi.GdiFont.Source">
+            <summary>
+            Gets the source <see cref="T:System.Drawing.Font" /> of this font.
+            </summary>
+        </member>
+        <member name="P:Vintasoft.Imaging.Drawing.Gdi.GdiFont.Name">
+            <summary>
+            Gets the face name of this font.
+            </summary>
+        </member>
+        <member name="P:Vintasoft.Imaging.Drawing.Gdi.GdiFont.Size">
+            <summary>
+            Gets the size of this font measured in the world space units.
+            </summary>
+        </member>
+        <member name="P:Vintasoft.Imaging.Drawing.Gdi.GdiFont.IsBold">
+            <summary>
+            Gets a value indicating whether this font is bold.
+            </summary>
+            <value>
+            <b>True</b> if this font is bold; otherwise, <b>false</b>.
+            </value>
+        </member>
+        <member name="P:Vintasoft.Imaging.Drawing.Gdi.GdiFont.IsItalic">
+            <summary>
+            Gets a value indicating whether this font is italic.
+            </summary>
+            <value>
+            <b>True</b> if this font is italic; otherwise, <b>false</b>.
+            </value>
+        </member>
+        <member name="P:Vintasoft.Imaging.Drawing.Gdi.GdiFont.Metrics">
+            <summary>
+            Gets the font metrics.
+            </summary>
+        </member>
+        <member name="P:Vintasoft.Imaging.Drawing.Gdi.GdiFont.IsVertical">
+            <summary>
+            Gets a value indicating whether this font is vertical.
+            </summary>
+            <value>
+            <b>True</b> - font is vertical;
+            <b>false</b> - font is NOT vertical.
+            </value>
+        </member>
+        <member name="M:Vintasoft.Imaging.Drawing.Gdi.GdiFont.FromFontFile(System.IO.Stream,System.String,System.Single)">
+            <summary>
+            Creates the font using the specified font file stream in TTF format.
+            </summary>
+            <param name="fontFileStream">The font file stream in TTF format.</param>
+            <param name="fontFamilyName">The font family name.</param>
+            <param name="size">The font size.</param>
+            <returns>A new font based on TTF font file.</returns>
+        </member>
+        <member name="M:Vintasoft.Imaging.Drawing.Gdi.GdiFont.FromFontFile(System.String,System.String,System.Single)">
+            <summary>
+            Creates the font using the specified font file stream in TTF format.
+            </summary>
+            <param name="fontFilename">The name of font file in TTF format.</param>
+            <param name="fontFamilyName">The font family name.</param>
+            <param name="size">The font size.</param>
+            <returns>A new font based on TTF font file.</returns>
+        </member>
+        <member name="M:Vintasoft.Imaging.Drawing.Gdi.GdiFont.Clone">
+            <summary>
+            Creates a new <see cref="T:Vintasoft.Imaging.Drawing.Gdi.GdiFont" /> that is a copy of the current instance.
+            </summary>
+            <returns>
+            A new <see cref="T:Vintasoft.Imaging.Drawing.Gdi.GdiFont" /> that is a copy of this instance.
+            </returns>
+        </member>
+        <member name="M:Vintasoft.Imaging.Drawing.Gdi.GdiFont.Dispose">
+            <summary>
+            Releases all resources used by this <see cref="T:Vintasoft.Imaging.Drawing.Gdi.GdiFont" /> object.
+            </summary>
+        </member>
+        <member name="M:Vintasoft.Imaging.Drawing.Gdi.GdiFont.CanUseSymbol(System.String)">
+            <summary>
+            Returns a value indicating whether symbol can be used.
+            </summary>
+            <param name="unicodeSymbol">The Unicode symbol.</param>
+            <returns>
+            <b>True</b> - symbol can be used; otherwise, <b>false</b>.
+            </returns>
+        </member>
+        <member name="M:Vintasoft.Imaging.Drawing.Gdi.GdiFont.MeasureCharacters(System.String)">
+            <summary>
+            Measures Unicode characters.
+            </summary>
+            <param name="text">A text that contains Unicode characters.</param>
+            <returns>
+            Returns an array of character sizes.
+            </returns>
+        </member>
+        <member name="M:Vintasoft.Imaging.Drawing.Gdi.GdiFont.MeasureStringWidthCore(System.String)">
+            <summary>
+            Measures the width of the specified string when drawn with this font.
+            </summary>
+            <param name="text">A string to measure.</param>
+            <returns>
+            Width of the string.
+            </returns>
+        </member>
+        <member name="M:Vintasoft.Imaging.Drawing.Gdi.GdiFont.AddStringCore(Vintasoft.Imaging.Drawing.IGraphicsPath,System.String,System.Drawing.PointF)">
+            <summary>
+            Adds the specified string to the specified <see cref="T:Vintasoft.Imaging.Drawing.IGraphicsPath" /> at the specified location.
+            </summary>
+            <param name="graphicsPath">The graphics path.</param>
+            <param name="text">A string to draw.</param>
+            <param name="point">The upper-left corner of the adding text.</param>
+        </member>
+        <member name="M:Vintasoft.Imaging.Drawing.Gdi.GdiFont.DrawStringCore(Vintasoft.Imaging.Drawing.DrawingEngine,System.String,Vintasoft.Imaging.Drawing.IDrawingBrush,System.Drawing.PointF)">
+            <summary>
+            Draws the specified string on specified <see cref="T:Vintasoft.Imaging.Drawing.DrawingEngine" /> at the specified location
+            using the specified <see cref="T:Vintasoft.Imaging.Drawing.IDrawingBrush" /> object.
+            </summary>
+            <param name="drawingEngine">The drawing engine.</param>
+            <param name="text">A string to draw.</param>
+            <param name="brush">The brush, which should be used for drawing text.</param>
+            <param name="point">The upper-left corner of the drawn text.</param>
+        </member>
+        <member name="M:Vintasoft.Imaging.Drawing.Gdi.GdiFont.SetSource(System.Drawing.Font)">
+            <summary>
+            Sets the source of this font.
+            </summary>
+            <param name="source">The source.</param>
+            <exception cref="T:System.InvalidOperationException">Thrown if source is set already.</exception>
+        </member>
+        <member name="T:Vintasoft.Imaging.Drawing.Gdi.GdiFontMetrics">
+            <summary>
+            Provides the class that contains measurements for a <see cref="T:Vintasoft.Imaging.Drawing.Gdi.GdiFont" />.
+            </summary>
+        </member>
+        <member name="M:Vintasoft.Imaging.Drawing.Gdi.GdiFontMetrics.#ctor(System.Drawing.Font)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Vintasoft.Imaging.Drawing.Gdi.GdiFontMetrics" /> class.
+            </summary>
+            <param name="source">The source <see cref="T:System.Drawing.Font" /> of this font metrics.</param>
+        </member>
+        <member name="P:Vintasoft.Imaging.Drawing.Gdi.GdiFontMetrics.Source">
+            <summary>
+            Gets the source <see cref="T:System.Drawing.Font" /> of this font metrics.
+            </summary>
+        </member>
+        <member name="P:Vintasoft.Imaging.Drawing.Gdi.GdiFontMetrics.Ascent">
+            <summary>
+            Gets the font ascent.
+            </summary>
+        </member>
+        <member name="P:Vintasoft.Imaging.Drawing.Gdi.GdiFontMetrics.Descent">
+            <summary>
+            Gets the font descent.
+            </summary>
+        </member>
+        <member name="P:Vintasoft.Imaging.Drawing.Gdi.GdiFontMetrics.LineHeight">
+            <summary>
+            Gets the vertical distance between the base lines of two consecutive lines of text.
+            </summary>
+        </member>
+        <member name="P:Vintasoft.Imaging.Drawing.Gdi.GdiFontMetrics.UnitsPerEm">
+            <summary>
+            Gets the units-per-em value.
+            </summary>
+            <value>
+            Default value is <b>1000</b>.
+            </value>
+        </member>
+        <member name="T:Vintasoft.Imaging.Drawing.Gdi.GdiGraphics">
+            <summary>
+            Provides the 2D drawing engine, which is based on GDI+ drawing surface.
+            </summary>
+            <seealso cref="T:System.Drawing.Graphics" />
+            <example>This C#/VB.NET code shows how to create and use GDI drawing engine 
+            to draw different graphic objects like figures and text.
+            <code lang="VB.NET">
+            Imports System.Drawing
+            
+            Imports Vintasoft.Imaging
+            Imports Vintasoft.Imaging.Drawing
+            Imports Vintasoft.Imaging.Drawing.Gdi
+            
+            Class GdiGraphicsExample
+                ''' &lt;summary&gt;
+                ''' Creates GDI Graphics drawing engine on specified image and performs drawing.
+                ''' &lt;/summary&gt;
+                Public Shared Sub DrawWithGdiGraphics(image As VintasoftImage)
+                    ' create drawing engine for image
+                    Using drawingEngine As New GdiGraphics(image)
+                        ' create drawing area
+                        Dim drawingArea As New RectangleF(0, 0, image.Width, image.Height)
+                        ' draw objects in area
+                        DrawingExample(drawingEngine, drawingArea)
+                    End Using
+                End Sub
+            
+                ''' &lt;summary&gt;
+                ''' Draws graphic objects with specified drawing engine.
+                ''' &lt;/summary&gt;
+                ''' &lt;param name="drawingEngine"&gt;Drawing engine.&lt;/param&gt;
+                ''' &lt;param name="drawingArea"&gt;Image area to draw objects in.&lt;/param&gt;
+                Public Shared Sub DrawingExample(drawingEngine As DrawingEngine, drawingArea As RectangleF)
+                    ' create bounding rectangle for ellipse
+                    Dim ellipseRect As New RectangleF(drawingArea.X + drawingArea.Width * 0.3F, drawingArea.Y + drawingArea.Height * 0.3F, drawingArea.Width * 0.4F, drawingArea.Height * 0.4F)
+            
+                    ' create brush and pen to draw ellipse
+                    Using brush As IDrawingSolidBrush = drawingEngine.DrawingFactory.CreateSolidBrush(Color.Blue)
+                        Using pen As IDrawingPen = drawingEngine.DrawingFactory.CreatePen(Color.Red, 4F)
+                            ' fill ellipse
+                            drawingEngine.FillEllipse(brush, ellipseRect)
+                            ' stroke ellipse
+                            drawingEngine.DrawEllipse(pen, ellipseRect)
+                        End Using
+                    End Using
+            
+                    ' create brush and font to draw text
+                    Using textBrush As IDrawingSolidBrush = drawingEngine.DrawingFactory.CreateSolidBrush(Color.Yellow)
+                        Using font As IDrawingFont = drawingEngine.DrawingFactory.CreateFont("Arial", 30, True, False)
+                            ' create properties to layout text
+                            Dim layoutProperties As New TextLayoutProperties(AnchorType.Center)
+                            ' draw text
+                            drawingEngine.DrawText("Text", font, textBrush, ellipseRect, layoutProperties)
+                        End Using
+                    End Using
+                End Sub
+            End Class
+            </code>
+            <code lang="C#">
+            using System.Drawing;
+            
+            using Vintasoft.Imaging;
+            using Vintasoft.Imaging.Drawing;
+            using Vintasoft.Imaging.Drawing.Gdi;
+            
+            namespace CSHARP
+            {
+                class GdiGraphicsExample
+                {
+                    /// &lt;summary&gt;
+                    /// Creates GDI Graphics drawing engine on specified image and performs drawing.
+                    /// &lt;/summary&gt;
+                    public static void DrawWithGdiGraphics(VintasoftImage image)
+                    {
+                        // create drawing engine for image
+                        using (GdiGraphics drawingEngine = new GdiGraphics(image))
+                        {
+                            // create drawing area
+                            RectangleF drawingArea = new RectangleF(0, 0, image.Width, image.Height);
+                            // draw objects in area
+                            DrawingExample(drawingEngine, drawingArea);
+                        }
+                    }
+            
+                    /// &lt;summary&gt;
+                    /// Draws graphic objects with specified drawing engine.
+                    /// &lt;/summary&gt;
+                    /// &lt;param name="drawingEngine"&gt;Drawing engine.&lt;/param&gt;
+                    /// &lt;param name="drawingArea"&gt;Image area to draw objects in.&lt;/param&gt;
+                    public static void DrawingExample(DrawingEngine drawingEngine, RectangleF drawingArea)
+                    {
+                        // create bounding rectangle for ellipse
+                        RectangleF ellipseRect = new RectangleF(
+                            drawingArea.X + drawingArea.Width * 0.3f,
+                            drawingArea.Y + drawingArea.Height * 0.3f,
+                            drawingArea.Width * 0.4f,
+                            drawingArea.Height * 0.4f);
+            
+                        // create brush and pen to draw ellipse
+                        using (IDrawingSolidBrush brush = drawingEngine.DrawingFactory.CreateSolidBrush(Color.Blue))
+                        {
+                            using (IDrawingPen pen = drawingEngine.DrawingFactory.CreatePen(Color.Red, 4f))
+                            {
+                                // fill ellipse
+                                drawingEngine.FillEllipse(brush, ellipseRect);
+                                // stroke ellipse
+                                drawingEngine.DrawEllipse(pen, ellipseRect);
+                            }
+                        }
+            
+                        // create brush and font to draw text
+                        using (IDrawingSolidBrush textBrush = drawingEngine.DrawingFactory.CreateSolidBrush(Color.Yellow))
+                        {
+                            using (IDrawingFont font = drawingEngine.DrawingFactory.CreateFont("Arial", 30, true, false))
+                            {
+                                // create properties to layout text
+                                TextLayoutProperties layoutProperties = new TextLayoutProperties(AnchorType.Center);
+                                // draw text
+                                drawingEngine.DrawText("Text", font, textBrush, ellipseRect, layoutProperties);
+                            }
+                        }
+                    }
+                }
+            }
+            </code>
+            </example>
+        </member>
+        <member name="M:Vintasoft.Imaging.Drawing.Gdi.GdiGraphics.#ctor(System.Drawing.Graphics)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Vintasoft.Imaging.Drawing.Gdi.GdiGraphics" /> class.
+            </summary>
+            <param name="graphics">The source Syste.Drawing.Graphics object.</param>
+        </member>
+        <member name="M:Vintasoft.Imaging.Drawing.Gdi.GdiGraphics.#ctor(Vintasoft.Imaging.VintasoftImage)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Vintasoft.Imaging.Drawing.Gdi.GdiGraphics" /> class.
+            </summary>
+            <param name="image">The canvas image.</param>
+        </member>
+        <member name="P:Vintasoft.Imaging.Drawing.Gdi.GdiGraphics.SurfaceBounds">
+            <summary>
+            Gets the surface bounds, in surface space.
+            </summary>
+        </member>
+        <member name="P:Vintasoft.Imaging.Drawing.Gdi.GdiGraphics.Source">
+            <summary>
+            Gets the source object of this GDI graphics.
+            </summary>
+        </member>
+        <member name="P:Vintasoft.Imaging.Drawing.Gdi.GdiGraphics.Resolution">
+            <summary>
+            Gets the resolution of this drawing engine.
+            </summary>
+        </member>
+        <member name="P:Vintasoft.Imaging.Drawing.Gdi.GdiGraphics.DrawingFactory">
+            <summary>
+            Gets the tools factory of this drawing engine.
+            </summary>
+        </member>
+        <member name="P:Vintasoft.Imaging.Drawing.Gdi.GdiGraphics.Transform">
+            <summary>
+            Gets or sets a copy of the geometric world transformation for this drawing engine.
+            </summary>
+            <value>
+            A copy of the <see cref="T:Vintasoft.Imaging.AffineMatrix" /> that represents the geometric world transformation for this drawing engine.
+            </value>
+        </member>
+        <member name="P:Vintasoft.Imaging.Drawing.Gdi.GdiGraphics.VisibleClipBounds">
+            <summary>
+            Gets the bounding rectangle of the visible clipping region of this drawing engine.
+            </summary>
+        </member>
+        <member name="P:Vintasoft.Imaging.Drawing.Gdi.GdiGraphics.ClipBounds">
+            <summary>
+            Gets the bounding rectangle of the clipping region of this drawing engine.
+            </summary>
+        </member>
+        <member name="P:Vintasoft.Imaging.Drawing.Gdi.GdiGraphics.Clip">
+            <summary>
+            Gets or sets a copy of region that limits the drawing region of this drawing engine.
+            </summary>
+            <value>
+            A copy of the <see cref="T:Vintasoft.Imaging.Drawing.IRegion" /> that represents the region that limits the drawing region of this drawing engine.
+            </value>
+            <exception cref="T:System.ArgumentNullException">Thrown if <i>value</i> is <b>null</b>.</exception>
+        </member>
+        <member name="P:Vintasoft.Imaging.Drawing.Gdi.GdiGraphics.InterpolationMode">
+            <summary>
+            Gets or sets the interpolation mode, which is associated with this drawing engine.
+            </summary>
+        </member>
+        <member name="P:Vintasoft.Imaging.Drawing.Gdi.GdiGraphics.SmoothingMode">
+            <summary>
+            Gets or sets the smoothing mode, which is associated with this drawing engine.
+            </summary>
+        </member>
+        <member name="P:Vintasoft.Imaging.Drawing.Gdi.GdiGraphics.CompositingMode">
+            <summary>
+            Gets or sets the compositing mode.
+            </summary>
+        </member>
+        <member name="P:Vintasoft.Imaging.Drawing.Gdi.GdiGraphics.CharacterSpacing">
+            <summary>
+            Gets or sets the character spacing, in world space.
+            </summary>
+            <value>
+            Default value is 0.
+            </value>
+        </member>
+        <member name="P:Vintasoft.Imaging.Drawing.Gdi.GdiGraphics.TextRenderingHint">
+            <summary>
+            Gets or sets the text rendering hint.
+            </summary>
+            <value>
+            Default value is <see cref="P:Vintasoft.Imaging.Drawing.Gdi.GdiGraphics.TextRenderingHint" />.AntiAlias.
+            </value>
+        </member>
+        <member name="P:Vintasoft.Imaging.Drawing.Gdi.GdiGraphics.DrawSharpImageBorders">
+            <summary>
+            Gets or sets a value indicating whether the SDK must use special algorithm for drawing sharp image borders.
+            </summary>
+            <value>
+            <b>False</b> - the SDK must NOT use special algorithm for drawing sharp image borders;
+            <b>True</b> - the SDK must use special algorithm for drawing sharp image borders.<br />
+            Default value is <b>false</b>.
+            </value>
+        </member>
+        <member name="M:Vintasoft.Imaging.Drawing.Gdi.GdiGraphics.SetPixelOffsetModeToHalf">
+            <summary>
+            Sets the <see cref="P:Vintasoft.Imaging.Drawing.Gdi.GdiGraphics.Source" />.<see cref="P:System.Drawing.Graphics.PixelOffsetMode" /> to <see cref="T:System.Drawing.Drawing2D.PixelOffsetMode" />.Half.
+            </summary>
+        </member>
+        <member name="M:Vintasoft.Imaging.Drawing.Gdi.GdiGraphics.SetDrawingPropertiesFrom(Vintasoft.Imaging.Drawing.DrawingEngine)">
+            <summary>
+            Sets the drawing properties from specified drawing engine.
+            </summary>
+            <param name="drawingEngine">The drawing engine.</param>
+            <remarks>
+            This method sets the following properties:
+            <ul>
+            <li><see cref="P:Vintasoft.Imaging.Drawing.Gdi.GdiGraphics.InterpolationMode" /></li>
+            <li><see cref="P:Vintasoft.Imaging.Drawing.Gdi.GdiGraphics.SmoothingMode" /></li>
+            <li><see cref="P:Vintasoft.Imaging.Drawing.Gdi.GdiGraphics.CharacterSpacing" /></li>
+            <li><see cref="P:Vintasoft.Imaging.Drawing.Gdi.GdiGraphics.DrawSharpImageBorders" /></li>
+            <li><see cref="P:Vintasoft.Imaging.Drawing.Gdi.GdiGraphics.TextRenderingHint" /></li>
+            </ul>
+            </remarks>
+        </member>
+        <member name="M:Vintasoft.Imaging.Drawing.Gdi.GdiGraphics.Clear(Vintasoft.Imaging.ImageColors.ColorBase)">
+            <summary>
+            Clears drawing surface uses specified color.
+            </summary>
+            <param name="color">The color.</param>
+        </member>
+        <member name="M:Vintasoft.Imaging.Drawing.Gdi.GdiGraphics.DrawString(System.String,Vintasoft.Imaging.Drawing.IDrawingFont,Vintasoft.Imaging.Drawing.IDrawingBrush,System.Drawing.PointF)">
+            <summary>
+            Draws the specified text string at the specified location
+            using the specified <see cref="T:Vintasoft.Imaging.Drawing.IDrawingBrush" /> and <see cref="T:Vintasoft.Imaging.Drawing.IDrawingFont" /> objects.
+            </summary>
+            <param name="text">A string in Unicode encoding to draw.</param>
+            <param name="font">The font, which should be used for drawing text.</param>
+            <param name="brush">The brush, which should be used for drawing text.</param>
+            <param name="point">The upper-left corner of the drawn text.</param>
+        </member>
+        <member name="M:Vintasoft.Imaging.Drawing.Gdi.GdiGraphics.DrawString(Vintasoft.Imaging.Drawing.DrawingString,Vintasoft.Imaging.Drawing.IDrawingFont,Vintasoft.Imaging.Drawing.IDrawingBrush,System.Drawing.PointF)">
+            <summary>
+            Draws the specified text string at the specified location
+            using the specified <see cref="T:Vintasoft.Imaging.Drawing.IDrawingBrush" /> and <see cref="T:Vintasoft.Imaging.Drawing.IDrawingFont" /> objects.
+            </summary>
+            <param name="text">The string to draw.</param>
+            <param name="font">The font, which should be used for drawing text.</param>
+            <param name="brush">The brush, which should be used for drawing text.</param>
+            <param name="point">The upper-left corner of the drawn text.</param>
+        </member>
+        <member name="M:Vintasoft.Imaging.Drawing.Gdi.GdiGraphics.SuspendRendering">
+            <summary>
+            Suspends the rendering.
+            </summary>
+        </member>
+        <member name="M:Vintasoft.Imaging.Drawing.Gdi.GdiGraphics.ResumeRendering(System.Boolean)">
+            <summary>
+            Resumes the rendering.
+            </summary>
+            <param name="canvasIsChanged">A value indicating whether the <see cref="P:Vintasoft.Imaging.Drawing.RasterDrawingEngine.Canvas" /> image is changed.</param>
+        </member>
+        <member name="M:Vintasoft.Imaging.Drawing.Gdi.GdiGraphics.Flush">
+            <summary>
+            Forces execution of all pending operations with the waiting to return before the operations finish.
+            </summary>
+        </member>
+        <member name="M:Vintasoft.Imaging.Drawing.Gdi.GdiGraphics.Close">
+            <summary>
+            Closes this this drawing engine.
+            </summary>
+        </member>
+        <member name="M:Vintasoft.Imaging.Drawing.Gdi.GdiGraphics.DrawPathCore(Vintasoft.Imaging.Drawing.IDrawingPen,Vintasoft.Imaging.Drawing.IGraphicsPath)">
+            <summary>
+            Draws a path.
+            </summary>
+            <param name="pen">The pen that determines the color, width, and style of the path.</param>
+            <param name="path">The path to draw.</param>
+        </member>
+        <member name="M:Vintasoft.Imaging.Drawing.Gdi.GdiGraphics.FillPathCore(Vintasoft.Imaging.Drawing.IDrawingBrush,Vintasoft.Imaging.Drawing.IGraphicsPath)">
+            <summary>
+            Fills the interior of a path.
+            </summary>
+            <param name="brush">The brush that determines the characteristics of the fill.</param>
+            <param name="path">The path to fill.</param>
+        </member>
+        <member name="M:Vintasoft.Imaging.Drawing.Gdi.GdiGraphics.GetCanvasPixelManipulatorPixelFormat">
+            <summary>
+            Returns a pixel format that must be used as a pixel format of <see cref="P:Vintasoft.Imaging.Drawing.RasterDrawingEngine.CanvasPixelManipulator" />.
+            </summary>
+            <returns>
+            A pixel format that must be used as a pixel format of <see cref="P:Vintasoft.Imaging.Drawing.RasterDrawingEngine.CanvasPixelManipulator" />.
+            </returns>
+        </member>
+        <member name="M:Vintasoft.Imaging.Drawing.Gdi.GdiGraphics.DrawImageCore(Vintasoft.Imaging.VintasoftImage,System.Drawing.RectangleF,System.Drawing.RectangleF)">
+            <summary>
+            Draws the specified portion of the specified <see cref="T:Vintasoft.Imaging.VintasoftImage" /> at
+            the specified rectangle.
+            </summary>
+            <param name="image">The <see cref="T:Vintasoft.Imaging.VintasoftImage" /> to draw.</param>
+            <param name="destRect">The <see cref="T:System.Drawing.RectangleF" /> structure that specifies the location and size of the drawn image.</param>
+            <param name="sourceRect">The <see cref="T:System.Drawing.RectangleF" /> structure that specifies the portion of the <paramref name="image" /> to draw.</param>
+        </member>
+        <member name="M:Vintasoft.Imaging.Drawing.Gdi.GdiGraphics.GetPenForDraw(Vintasoft.Imaging.Drawing.IDrawingPen,System.Boolean@)">
+            <summary>
+            Returns the pen for drawing.
+            </summary>
+            <param name="pen">The pen.</param>
+            <param name="disposeAfterUse">A value indicating whether returned <see cref="T:Vintasoft.Imaging.Drawing.IDrawingPen" /> must be disposed after use.</param>
+            <returns>
+            The <see cref="T:Vintasoft.Imaging.Drawing.IDrawingPen" />.
+            </returns>
+        </member>
+        <member name="M:Vintasoft.Imaging.Drawing.Gdi.GdiGraphics.PreprocessDrawingImage(Vintasoft.Imaging.VintasoftImage,System.Drawing.RectangleF@,System.Drawing.RectangleF@)">
+            <summary>
+            Preprocesses the image before drawing.
+            </summary>
+            <param name="image">The image.</param>
+            <param name="destRect">The <see cref="T:System.Drawing.RectangleF" /> structure that specifies the location and size of the drawn image.</param>
+            <param name="sourceRect">The <see cref="T:System.Drawing.RectangleF" /> structure that specifies the portion of the <paramref name="image" /> to draw.</param>
+            <returns>
+            Proceessed image.
+            </returns>
+        </member>
+        <member name="T:Vintasoft.Imaging.Drawing.Gdi.GdiGraphicsFactory">
+            <summary>
+            Represents the drawing factory for <see cref="T:Vintasoft.Imaging.Drawing.Gdi.GdiGraphics" />.
+            </summary>
+        </member>
+        <member name="M:Vintasoft.Imaging.Drawing.Gdi.GdiGraphicsFactory.#ctor(Vintasoft.Imaging.Drawing.Gdi.GdiGraphics)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Vintasoft.Imaging.Drawing.Gdi.GdiGraphicsFactory" /> class.
+            </summary>
+            <param name="graphics">The GDI drawing engine.</param>
+        </member>
+        <member name="M:Vintasoft.Imaging.Drawing.Gdi.GdiGraphicsFactory.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Vintasoft.Imaging.Drawing.Gdi.GdiGraphicsFactory" /> class.
+            </summary>
+        </member>
+        <member name="P:Vintasoft.Imaging.Drawing.Gdi.GdiGraphicsFactory.PixelOffsetMode">
+            <summary>
+            Gets or sets the pixel offset mode that is used for creating of new <see cref="T:Vintasoft.Imaging.Drawing.Gdi.GdiGraphics" />.
+            </summary>
+        </member>
+        <member name="P:Vintasoft.Imaging.Drawing.Gdi.GdiGraphicsFactory.ScreenResolution">
+            <summary>
+            Gets the resolution of the screen, in dots per inch.
+            </summary>
+        </member>
+        <member name="M:Vintasoft.Imaging.Drawing.Gdi.GdiGraphicsFactory.Dispose">
+            <summary>
+            Releases all resources used by the <see cref="T:Vintasoft.Imaging.Drawing.Gdi.GdiGraphicsFactory" />.
+            </summary>
+        </member>
+        <member name="M:Vintasoft.Imaging.Drawing.Gdi.GdiGraphicsFactory.SetAsDefault">
+            <summary>
+            Sets an instance of <see cref="T:Vintasoft.Imaging.Drawing.Gdi.GdiGraphicsFactory" /> as default drawing factory of VintaSoft Imaging .NET SDK.
+            </summary>
+            <seealso cref="P:Vintasoft.Imaging.Drawing.DrawingFactory.Default" />
+        </member>
+        <member name="M:Vintasoft.Imaging.Drawing.Gdi.GdiGraphicsFactory.CreateBitmap(System.IO.Stream,System.Boolean)">
+            <summary>
+            Creates a bitmap that contains image that is decoded from specified stream using embedded decoder.
+            </summary>
+            <param name="stream">The stream.</param>
+            <param name="allowUndefinedPixelFormat">A value indicating whether a new bitmap can have <see cref="F:Vintasoft.Imaging.PixelFormat.Undefined" /> pixel format.</param>
+            <returns>
+            A new bitmap object.
+            </returns>
+        </member>
+        <member name="M:Vintasoft.Imaging.Drawing.Gdi.GdiGraphicsFactory.CreateBitmap(System.Int32,System.Int32,System.Int32,Vintasoft.Imaging.Resolution,Vintasoft.Imaging.PixelFormat,Vintasoft.Imaging.Palette)">
+            <summary>
+            Creates a new bitmap object that must be used in this drawing engine.
+            </summary>
+            <param name="width">The width.</param>
+            <param name="height">The height.</param>
+            <param name="stride">The stride.</param>
+            <param name="resolution">The resolution.</param>
+            <param name="pixelFormat">The pixel format.</param>
+            <param name="palette">The palette.</param>
+            <returns>A new bitmap object.</returns>
+        </member>
+        <member name="M:Vintasoft.Imaging.Drawing.Gdi.GdiGraphicsFactory.CreateLinearGradientBrush(System.Drawing.RectangleF,Vintasoft.Imaging.Drawing.GradientStop[])">
+            <summary>
+            Creates a linear gradient brush.
+            </summary>
+            <param name="rectangle">A <see cref="T:System.Drawing.RectangleF" /> structure that specifies the bounds of the linear gradient.</param>
+            <param name="gradientStops">The brush's gradient stops.</param>
+            <returns>
+            New linear gradient brush.
+            </returns>
+        </member>
+        <member name="M:Vintasoft.Imaging.Drawing.Gdi.GdiGraphicsFactory.CreateLinearGradientBrush(Vintasoft.Imaging.Drawing.IDrawingLinearGradientBrush)">
+            <summary>
+            Creates a linear gradient brush and copies properties from specified linear gradient brush to the newly created brush.
+            </summary>
+            <param name="sourceBrush">The source brush.</param>
+            <returns>
+            New linear gradient brush.
+            </returns>
+        </member>
+        <member name="M:Vintasoft.Imaging.Drawing.Gdi.GdiGraphicsFactory.CreateCompositeEngine(Vintasoft.Imaging.Drawing.DrawingEngine,Vintasoft.Imaging.Drawing.DrawingEngine)">
+            <summary>
+            Creates the composite drawing engine.
+            </summary>
+            <param name="master">The master drawing engine.</param>
+            <param name="slave">The slave drawing engine.</param>
+            <returns>An new instance of <see cref="T:Vintasoft.Imaging.Drawing.CompositeDrawingEngine" /> class.</returns>
+        </member>
+        <member name="M:Vintasoft.Imaging.Drawing.Gdi.GdiGraphicsFactory.CreateRasterDrawingEngine(Vintasoft.Imaging.VintasoftImage)">
+            <summary>
+            Creates the drawing engine on specified canvas image.
+            </summary>
+            <param name="image">The canvas image.</param>
+            <returns>
+            New raster drawing engine.
+            </returns>
+        </member>
+        <member name="M:Vintasoft.Imaging.Drawing.Gdi.GdiGraphicsFactory.CreatePen(Vintasoft.Imaging.ImageColors.ColorBase,System.Single)">
+            <summary>
+            Creates a pen with specified color and width.
+            </summary>
+            <param name="color">The pen color.</param>
+            <param name="width">The pen width.</param>
+            <returns>
+            New pen with specified color and width.
+            </returns>
+        </member>
+        <member name="M:Vintasoft.Imaging.Drawing.Gdi.GdiGraphicsFactory.CreatePen(Vintasoft.Imaging.Drawing.IDrawingBrush,System.Single)">
+            <summary>
+            Creates a pen with specified brush and width.
+            </summary>
+            <param name="brush">The brush.</param>
+            <param name="width">The pen width.</param>
+            <returns>
+            New pen with specified brush and width.
+            </returns>
+        </member>
+        <member name="M:Vintasoft.Imaging.Drawing.Gdi.GdiGraphicsFactory.CreateSolidBrush(Vintasoft.Imaging.ImageColors.ColorBase)">
+            <summary>
+            Creates a solid brush with specified color.
+            </summary>
+            <param name="color">The brush color.</param>
+            <returns>
+            New solid brush with specified color.
+            </returns>
+        </member>
+        <member name="M:Vintasoft.Imaging.Drawing.Gdi.GdiGraphicsFactory.CreateImageBrush(Vintasoft.Imaging.VintasoftImage,System.Boolean)">
+            <summary>
+            Creates an image brush with specified color.
+            </summary>
+            <param name="image">The image.</param>
+            <param name="disposeImageAfterUse">A value indicating whether <paramref name="image" /> must be disposed when this brush is disposed.</param>
+            <returns>
+            New image brush with specified image.
+            </returns>
+        </member>
+        <member name="M:Vintasoft.Imaging.Drawing.Gdi.GdiGraphicsFactory.CreateHatchBrush(Vintasoft.Imaging.Drawing.BrushHatchStyle,Vintasoft.Imaging.ImageColors.ColorBase,Vintasoft.Imaging.ImageColors.ColorBase)">
+            <summary>
+            Creates a hatch brush.
+            </summary>
+            <param name="hatchStyle">The hatch style.</param>
+            <param name="foregroundColor">The foreground brush color.</param>
+            <param name="backgroundColor">The background brush color.</param>
+            <returns>
+            New hatch brush.
+            </returns>
+        </member>
+        <member name="M:Vintasoft.Imaging.Drawing.Gdi.GdiGraphicsFactory.CreateGraphicsPath">
+            <summary>
+            Creates the graphics path.
+            </summary>
+            <returns>
+            New graphics path.
+            </returns>
+        </member>
+        <member name="M:Vintasoft.Imaging.Drawing.Gdi.GdiGraphicsFactory.CreateGraphicsPath(Vintasoft.Imaging.Drawing.GraphicsPathData)">
+            <summary>
+            Creates the graphics path with specified path data.
+            </summary>
+            <param name="pathData">Path data.</param>
+            <returns>
+            New graphics path.
+            </returns>
+        </member>
+        <member name="M:Vintasoft.Imaging.Drawing.Gdi.GdiGraphicsFactory.GetIsValidPathType(Vintasoft.Imaging.Drawing.IGraphicsPath)">
+            <summary>
+            Returns a value indicating whether the type of graphics path is valid for this drawing factory.
+            </summary>
+            <param name="path">The path.</param>
+            <returns>
+            <b>True</b> - type of <paramref name="path" /> is valid; otherwise, <b>false</b>.
+            </returns>
+        </member>
+        <member name="M:Vintasoft.Imaging.Drawing.Gdi.GdiGraphicsFactory.CreateRegion">
+            <summary>
+            Creates the region.
+            </summary>
+            <returns>
+            New region.
+            </returns>
+        </member>
+        <member name="M:Vintasoft.Imaging.Drawing.Gdi.GdiGraphicsFactory.CreateRegion(Vintasoft.Imaging.Drawing.IRegion)">
+            <summary>
+            Creates the region and sets interior to the specified region.
+            </summary>
+            <param name="region">The region.</param>
+            <returns>
+            New region.
+            </returns>
+        </member>
+        <member name="M:Vintasoft.Imaging.Drawing.Gdi.GdiGraphicsFactory.CreateSystemFont(System.String,System.Single,System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            Creates the system font by name.
+            </summary>
+            <param name="fontName">The name of the font.</param>
+            <param name="size">The size of the font measured in the world space units (1/96 inch).</param>
+            <param name="isBold">A value indicating whether font is bold.</param>
+            <param name="isItalic">A value indicating whether font is italic.</param>
+            <param name="useFallbackFont">A value indicating whether font with fallback must be created.</param>
+            <returns>
+            The font.
+            </returns>
+            <seealso cref="M:Vintasoft.Imaging.Drawing.DrawingFactory.CreateFontWithFallback(Vintasoft.Imaging.Drawing.IDrawingFont)" />
+        </member>
+        <member name="M:Vintasoft.Imaging.Drawing.Gdi.GdiGraphicsFactory.CreateFont(Vintasoft.Imaging.Fonts.FontProgramSearchResult,System.Single,System.Boolean)">
+            <summary>
+            Creates the font.
+            </summary>
+            <param name="searchResult">The font program search result.</param>
+            <param name="size">The size of the font.</param>
+            <param name="useFallbackFont">A value indicating whether font with fallback must be created.</param>
+            <returns>
+            The font.
+            </returns>
+            <seealso cref="M:Vintasoft.Imaging.Drawing.DrawingFactory.CreateFontWithFallback(Vintasoft.Imaging.Drawing.IDrawingFont)" />
+        </member>
+        <member name="M:Vintasoft.Imaging.Drawing.Gdi.GdiGraphicsFactory.CreateFont(Vintasoft.Imaging.Drawing.IDrawingFont,System.Single,System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            Creates the font from the source font and changes size, bold/italic style of created font.
+            </summary>
+            <param name="font">The source font.</param>
+            <param name="size">The font size.</param>
+            <param name="isBold">A value indicating whether font is bold.</param>
+            <param name="isItalic">A value indicating whether font is italic.</param>
+            <param name="useFallbackFont">A value indicating whether font with fallback must be created.</param>
+            <returns>
+            The font.
+            </returns>
+            <seealso cref="M:Vintasoft.Imaging.Drawing.DrawingFactory.CreateFontWithFallback(Vintasoft.Imaging.Drawing.IDrawingFont)" />
+        </member>
+        <member name="M:Vintasoft.Imaging.Drawing.Gdi.GdiGraphicsFactory.GetSupportedRasterPixelFormats">
+            <summary>
+            Returns the supported raster pixel formats.
+            </summary>
+            <returns>
+            An array with supported raster pixel formats.
+            </returns>
+        </member>
+        <member name="M:Vintasoft.Imaging.Drawing.Gdi.GdiGraphicsFactory.GetNearestSupportedRasterPixelFormat(Vintasoft.Imaging.PixelFormat,Vintasoft.Imaging.Palette)">
+            <summary>
+            Returns the nearest supported raster pixel format.
+            </summary>
+            <param name="pixelFormat">The pixel format.</param>
+            <param name="palette">The palette.</param>
+            <returns>
+            The nearest supported raster pixel format.
+            </returns>
+            <exception cref="T:System.NotSupportedException">Thrown if <i>pixelFormat</i> is <b>Undefined</b>.</exception>
+        </member>
+        <member name="T:Vintasoft.Imaging.Drawing.Gdi.GdiGraphicsPath">
+            <summary>
+            Defines the graphics path based on <see cref="T:System.Drawing.Drawing2D.GraphicsPath" /> that 
+            provides series of connected lines and curves.
+            </summary>
+        </member>
+        <member name="M:Vintasoft.Imaging.Drawing.Gdi.GdiGraphicsPath.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Vintasoft.Imaging.Drawing.Gdi.GdiGraphicsPath" /> class.
+            </summary>
+        </member>
+        <member name="M:Vintasoft.Imaging.Drawing.Gdi.GdiGraphicsPath.#ctor(System.Drawing.Drawing2D.GraphicsPath,System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Vintasoft.Imaging.Drawing.Gdi.GdiGraphicsPath" /> class.
+            </summary>
+            <param name="source">The source System.Drawing.Drawing2D.GraphicsPath object.</param>
+            <param name="disposeSourceAfterUse">A value indicating whether <paramref name="source" /> must be disposed after use.</param>
+        </member>
+        <member name="M:Vintasoft.Imaging.Drawing.Gdi.GdiGraphicsPath.#ctor(Vintasoft.Imaging.Drawing.GraphicsPathData)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Vintasoft.Imaging.Drawing.Gdi.GdiGraphicsPath" /> class.
+            </summary>
+            <param name="pathData">The graphics path data.</param>
+        </member>
+        <member name="P:Vintasoft.Imaging.Drawing.Gdi.GdiGraphicsPath.Source">
+            <summary>
+            Gets the source object of this graphics path.
+            </summary>
+        </member>
+        <member name="P:Vintasoft.Imaging.Drawing.Gdi.GdiGraphicsPath.PointCount">
+            <summary>
+            Gets the number of points of this graphics path.
+            </summary>
+        </member>
+        <member name="P:Vintasoft.Imaging.Drawing.Gdi.GdiGraphicsPath.PathData">
+            <summary>
+            Gets a <see cref="T:Vintasoft.Imaging.Drawing.GraphicsPathData" /> that encapsulates arrays of points and types for this graphics path.
+            </summary>
+        </member>
+        <member name="P:Vintasoft.Imaging.Drawing.Gdi.GdiGraphicsPath.FillMode">
+            <summary>
+            Gets or sets a <see cref="T:Vintasoft.Imaging.Drawing.GraphicsPathFillMode" /> enumeration that determines how the
+            interiors of shapes in this grpahics path are filled.
+            </summary>
+        </member>
+        <member name="M:Vintasoft.Imaging.Drawing.Gdi.GdiGraphicsPath.Clone">
+            <summary>
+            Creates a new <see cref="T:Vintasoft.Imaging.Drawing.Gdi.GdiGraphicsPath" /> that is a copy of the current
+            instance.
+            </summary>
+            <returns>A new <see cref="T:Vintasoft.Imaging.Drawing.Gdi.GdiGraphicsPath" /> that is a copy of this
+            instance.</returns>
+        </member>
+        <member name="M:Vintasoft.Imaging.Drawing.Gdi.GdiGraphicsPath.Dispose">
+            <summary>
+            Releases all resources used by this <see cref="T:Vintasoft.Imaging.Drawing.Gdi.GdiGraphicsPath" /> object.
+            </summary>
+        </member>
+        <member name="M:Vintasoft.Imaging.Drawing.Gdi.GdiGraphicsPath.StartFigure">
+            <summary>
+            Starts a new figure without closing the current figure.
+            </summary>
+            <remarks>
+            All subsequent points added to the path are added to this new figure.
+            </remarks>
+        </member>
+        <member name="M:Vintasoft.Imaging.Drawing.Gdi.GdiGraphicsPath.CloseFigure">
+            <summary>
+            Closes the current figure and starts a new figure.
+            </summary>
+            <remarks>
+            If the current figure contains a sequence of connected lines and curves, the method
+            closes the loop by connecting a line from the endpoint to the starting point.
+            </remarks>
+        </member>
+        <member name="M:Vintasoft.Imaging.Drawing.Gdi.GdiGraphicsPath.CloseAllFigures">
+            <summary>
+            Closes all open figures in this path and starts a new figure.
+            </summary>
+            <remarks>
+            Closes each open figure by connecting a line from its endpoint to its starting point.
+            </remarks>
+        </member>
+        <member name="M:Vintasoft.Imaging.Drawing.Gdi.GdiGraphicsPath.AddBezierCurve(System.Drawing.PointF,System.Drawing.PointF,System.Drawing.PointF,System.Drawing.PointF)">
+            <summary>
+            Adds a cubic Bezier curve to the current figure.
+            </summary>
+            <param name="p1">A <see cref="T:System.Drawing.PointF" /> that represents the starting point of the curve.</param>
+            <param name="p2">A <see cref="T:System.Drawing.PointF" /> that represents the first control point for the curve.</param>
+            <param name="p3">A <see cref="T:System.Drawing.PointF" /> that represents the second control point for the curve.</param>
+            <param name="p4">A <see cref="T:System.Drawing.PointF" /> that represents the endpoint of the curve.</param>
+        </member>
+        <member name="M:Vintasoft.Imaging.Drawing.Gdi.GdiGraphicsPath.AddBezierCurves(System.Drawing.PointF[])">
+            <summary>
+            Adds a sequence of connected cubic Bezier curves to the current figure.
+            </summary>
+            <param name="points">An array of <see cref="T:System.Drawing.PointF" /> structures that represents the points that define the curves.</param>
+        </member>
+        <member name="M:Vintasoft.Imaging.Drawing.Gdi.GdiGraphicsPath.AddLine(System.Drawing.PointF,System.Drawing.PointF)">
+            <summary>
+            Appends a line segment to this graphics path.
+            </summary>
+            <param name="p1">A <see cref="T:System.Drawing.PointF" /> that represents the starting point of the line.</param>
+            <param name="p2">A <see cref="T:System.Drawing.PointF" /> that represents the endpoint of the line.</param>
+        </member>
+        <member name="M:Vintasoft.Imaging.Drawing.Gdi.GdiGraphicsPath.AddLines(System.Drawing.PointF[])">
+            <summary>
+            Appends a series of connected line segments to the end of this graphics path.
+            </summary>
+            <param name="points">An array of <see cref="T:System.Drawing.PointF" /> structures that represents the points that define the line segments to add.</param>
+        </member>
+        <member name="M:Vintasoft.Imaging.Drawing.Gdi.GdiGraphicsPath.AddPolygon(System.Drawing.PointF[])">
+            <summary>
+            Adds a polygon to this path.
+            </summary>
+            <param name="points">An array of <see cref="T:System.Drawing.PointF" /> structures that defines the polygon to add..</param>
+        </member>
+        <member name="M:Vintasoft.Imaging.Drawing.Gdi.GdiGraphicsPath.AddEllipse(System.Drawing.RectangleF)">
+            <summary>
+            Adds an ellipse to this path.
+            </summary>
+            <param name="rect">A rectangle that defines ellipse to add.</param>
+        </member>
+        <member name="M:Vintasoft.Imaging.Drawing.Gdi.GdiGraphicsPath.AddPath(Vintasoft.Imaging.Drawing.IGraphicsPath)">
+            <summary>
+            Adds a graphics path to this path.
+            </summary>
+            <param name="path">A graphics path.</param>
+        </member>
+        <member name="M:Vintasoft.Imaging.Drawing.Gdi.GdiGraphicsPath.AddPathData(Vintasoft.Imaging.Drawing.GraphicsPathData)">
+            <summary>
+            Adds a graphics path data to this path.
+            </summary>
+            <param name="pathData">A graphics path data.</param>
+        </member>
+        <member name="M:Vintasoft.Imaging.Drawing.Gdi.GdiGraphicsPath.Transform(Vintasoft.Imaging.AffineMatrix)">
+            <summary>
+            Applies a transform matrix to this graphics path.
+            </summary>
+            <param name="matrix">A <see cref="T:Vintasoft.Imaging.AffineMatrix" /> that represents the transformation to apply.</param>
+        </member>
+        <member name="M:Vintasoft.Imaging.Drawing.Gdi.GdiGraphicsPath.GetBounds(Vintasoft.Imaging.Drawing.IDrawingPen,Vintasoft.Imaging.AffineMatrix)">
+            <summary>
+            Returns a rectangle that bounds this graphics path.
+            </summary>
+            <param name="pen">A <see cref="T:Vintasoft.Imaging.Drawing.IDrawingPen" /> with which to draw the <see cref="T:Vintasoft.Imaging.Drawing.IGraphicsPath" />.</param>
+            <param name="transform">The <see cref="T:Vintasoft.Imaging.AffineMatrix" /> that specifies a transformation to be applied to this path before the bounding rectangle is calculated.</param>
+            <returns>
+            A <see cref="T:System.Drawing.RectangleF" /> that represents a rectangle that bounds this graphics path.
+            </returns>
+        </member>
+        <member name="M:Vintasoft.Imaging.Drawing.Gdi.GdiGraphicsPath.Reset">
+            <summary>
+            Empties the path points and point types arrays and sets the <see cref="P:Vintasoft.Imaging.Drawing.Gdi.GdiGraphicsPath.FillMode" /> to <see cref="T:Vintasoft.Imaging.Drawing.GraphicsPathFillMode" />.Alternate.
+            </summary>
+        </member>
+        <member name="M:Vintasoft.Imaging.Drawing.Gdi.GdiGraphicsPath.Widen(Vintasoft.Imaging.Drawing.IDrawingPen,System.Single)">
+            <summary>
+            Replaces this graphics path with curves that enclose the area that is filled when this path is drawn by the specified pen.
+            </summary>
+            <param name="pen">A <see cref="T:Vintasoft.Imaging.Drawing.IDrawingPen" /> that specifies the width between the original outline of the path and the new outline this method creates.</param>
+            <param name="flatness">A value that specifies the flatness for curves.</param>
+        </member>
+        <member name="M:Vintasoft.Imaging.Drawing.Gdi.GdiGraphicsPath.Widen(Vintasoft.Imaging.Drawing.IDrawingPen)">
+            <summary>
+            Replaces this graphics path with curves that enclose the area that is filled when this path is drawn by the specified pen.
+            </summary>
+            <param name="pen">A <see cref="T:Vintasoft.Imaging.Drawing.IDrawingPen" /> that specifies the width between the original outline of the path and the new outline this method creates.</param>
+        </member>
+        <member name="M:Vintasoft.Imaging.Drawing.Gdi.GdiGraphicsPath.Widen(Vintasoft.Imaging.Drawing.IDrawingPen,Vintasoft.Imaging.AffineMatrix,System.Single)">
+            <summary>
+            Replaces this graphics path with curves that enclose the area that is filled when this path is drawn by the specified pen.
+            </summary>
+            <param name="pen">A <see cref="T:Vintasoft.Imaging.Drawing.IDrawingPen" /> that specifies the width between the original outline of the path and the new outline this method creates.</param>
+            <param name="transform">A <see cref="T:Vintasoft.Imaging.AffineMatrix" /> that specifies a transform to apply to the path before widening.</param>
+            <param name="flatness">A value that specifies the flatness for curves.</param>
+        </member>
+        <member name="M:Vintasoft.Imaging.Drawing.Gdi.GdiGraphicsPath.GetHashCode">
+            <summary>
+            Returns a hash code for this instance.
+            </summary>
+            <returns>
+            A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table. 
+            </returns>
+        </member>
+        <member name="M:Vintasoft.Imaging.Drawing.Gdi.GdiGraphicsPath.Contains(System.Drawing.PointF)">
+            <summary>
+            Returns a value indicating whether the specified point is contained within this path.
+            </summary>
+            <param name="point">Point to test.</param>
+            <returns>
+            <b>True</b> - point is contained within this path;
+            <b>false</b> - point is not contained within this path.
+            </returns>
+        </member>
+        <member name="M:Vintasoft.Imaging.Drawing.Gdi.GdiGraphicsPath.OutlineContains(System.Drawing.PointF,Vintasoft.Imaging.Drawing.IDrawingPen)">
+            <summary>
+            Returns a value indicating whether the specified point is contained within (under)
+            the outline of this path when drawn with the specified pen.
+            </summary>
+            <param name="point">Point to test.</param>
+            <param name="pen">Pen to set the test outline.</param>
+            <returns>
+            <b>True</b> - point is contained within this path;
+            <b>false</b> - point is not contained within this path.
+            </returns>
+        </member>
+        <member name="M:Vintasoft.Imaging.Drawing.Gdi.GdiGraphicsPath.CreateGraphicsPathData(System.Drawing.Drawing2D.GraphicsPath)">
+            <summary>
+            Creates the graphics path data form specified path.
+            </summary>
+            <param name="path">The path.</param>
+            <returns>A new instance of <see cref="T:Vintasoft.Imaging.Drawing.GraphicsPathData" />.</returns>
+        </member>
+        <member name="M:Vintasoft.Imaging.Drawing.Gdi.GdiGraphicsPath.SetPathData(Vintasoft.Imaging.Drawing.GraphicsPathData)">
+            <summary>
+            Sets the path data.
+            </summary>
+            <param name="pathData">The path data.</param>
+        </member>
+        <member name="T:Vintasoft.Imaging.Drawing.Gdi.GdiHatchBrush">
+            <summary>
+            Defines a hatch brush based on <see cref="T:System.Drawing.Drawing2D.HatchBrush" />.
+            </summary>
+        </member>
+        <member name="M:Vintasoft.Imaging.Drawing.Gdi.GdiHatchBrush.#ctor(Vintasoft.Imaging.Drawing.BrushHatchStyle,Vintasoft.Imaging.ImageColors.ColorBase,Vintasoft.Imaging.ImageColors.ColorBase)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Vintasoft.Imaging.Drawing.Gdi.GdiHatchBrush" /> class.
+            </summary>
+            <param name="hatchStyle">The hatch style.</param>
+            <param name="foregroundColor">Color of the foreground.</param>
+            <param name="backgroundColor">Color of the background.</param>
+            <exception cref="T:System.ArgumentNullException"> Thrown if <i>foregroundColor</i> or <i>backgroundColor</i> is <b>null</b>.</exception>
+        </member>
+        <member name="P:Vintasoft.Imaging.Drawing.Gdi.GdiHatchBrush.HatchStyle">
+            <summary>
+            Gets the hatch style of the brush.
+            </summary>
+        </member>
+        <member name="P:Vintasoft.Imaging.Drawing.Gdi.GdiHatchBrush.ForegroundColor">
+            <summary>
+            Gets the foreground color of the brush.
+            </summary>
+        </member>
+        <member name="P:Vintasoft.Imaging.Drawing.Gdi.GdiHatchBrush.BackgroundColor">
+            <summary>
+            Gets the background color of the brush.
+            </summary>
+        </member>
+        <member name="M:Vintasoft.Imaging.Drawing.Gdi.GdiHatchBrush.GetHashCode">
+            <summary>
+            Serves as a hash function for a particular type.
+            </summary>
+            <returns>A hash code for the current object.</returns>
+        </member>
+        <member name="M:Vintasoft.Imaging.Drawing.Gdi.GdiHatchBrush.Equals(System.Object)">
+            <summary>
+            Determines whether the specified <see cref="T:System.Object" /> is equal to the current color.
+            </summary>
+            <param name="obj">The <see cref="T:System.Object" /> to compare with the current color.</param>
+            <returns>
+            <b>True</b> if the specified <see cref="T:System.Object" /> is equal to the current color; otherwise, <b>false</b>.
+            </returns>
+        </member>
+        <member name="M:Vintasoft.Imaging.Drawing.Gdi.GdiHatchBrush.Clone">
+            <summary>
+            Creates a new <see cref="T:Vintasoft.Imaging.Drawing.Gdi.GdiHatchBrush" /> that is a copy of the current
+            instance.
+            </summary>
+            <returns>
+            A new <see cref="T:Vintasoft.Imaging.Drawing.Gdi.GdiHatchBrush" /> that is a copy of this
+            instance.
+            </returns>
+        </member>
+        <member name="T:Vintasoft.Imaging.Drawing.Gdi.GdiImageBrush">
+            <summary>
+            Defines the image brush based on <see cref="T:System.Drawing.TextureBrush" /> that uses an image to fill the interior of a shape.
+            </summary>
+        </member>
+        <member name="M:Vintasoft.Imaging.Drawing.Gdi.GdiImageBrush.#ctor(Vintasoft.Imaging.VintasoftImage,System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Vintasoft.Imaging.Drawing.Gdi.GdiImageBrush" /> class.
+            </summary>
+            <param name="image">The image, which must be associated with brush.</param>
+            <param name="disposeImageAfterUse">A value indicating whether <paramref name="image" /> must be disposed when this brush is disposed.</param>
+            <exception cref="T:System.ArgumentNullException"> Thrown if <i>image</i> is <b>null</b>.</exception>
+        </member>
+        <member name="P:Vintasoft.Imaging.Drawing.Gdi.GdiImageBrush.Image">
+            <summary>
+            Gets the image associated with this image brush.
+            </summary>
+        </member>
+        <member name="P:Vintasoft.Imaging.Drawing.Gdi.GdiImageBrush.TileMode">
+            <summary>
+            Gets or sets the tile mode of this image brush.
+            </summary>
+        </member>
+        <member name="P:Vintasoft.Imaging.Drawing.Gdi.GdiImageBrush.Transform">
+            <summary>
+            Gets or sets the copy of transform, which defines a local geometric transformation for the image associated with this image brush.
+            </summary>
+        </member>
+        <member name="M:Vintasoft.Imaging.Drawing.Gdi.GdiImageBrush.GetHashCode">
+            <summary>
+            Serves as a hash function for a particular type.
+            </summary>
+            <returns>A hash code for the current object.</returns>
+        </member>
+        <member name="M:Vintasoft.Imaging.Drawing.Gdi.GdiImageBrush.Clone">
+            <summary>
+            Creates a new <see cref="T:Vintasoft.Imaging.Drawing.Gdi.GdiImageBrush" /> that is a copy of the current
+            instance.
+            </summary>
+            <returns>
+            A new <see cref="T:Vintasoft.Imaging.Drawing.Gdi.GdiImageBrush" /> that is a copy of this
+            instance.
+            </returns>
+        </member>
+        <member name="M:Vintasoft.Imaging.Drawing.Gdi.GdiImageBrush.CopyTo(System.Object)">
+            <summary>
+            Copies current <see cref="T:Vintasoft.Imaging.Drawing.Gdi.GdiBrush" /> to the target <see cref="T:Vintasoft.Imaging.Drawing.Gdi.GdiBrush" />.
+            </summary>
+            <param name="obj"><see cref="T:Vintasoft.Imaging.Drawing.Gdi.GdiBrush" /> to copy.</param>
+        </member>
+        <member name="M:Vintasoft.Imaging.Drawing.Gdi.GdiImageBrush.Equals(System.Object)">
+            <summary>
+            Determines whether the specified <see cref="T:System.Object" /> is equal to the current color.
+            </summary>
+            <param name="obj">The <see cref="T:System.Object" /> to compare with the current color.</param>
+            <returns>
+            <b>True</b> if the specified <see cref="T:System.Object" /> is equal to the current color; otherwise, <b>false</b>.
+            </returns>
+        </member>
+        <member name="M:Vintasoft.Imaging.Drawing.Gdi.GdiImageBrush.Dispose">
+            <summary>
+            Releases all resources used by this <see cref="T:Vintasoft.Imaging.Drawing.Gdi.GdiImageBrush" /> object.
+            </summary>
+        </member>
+        <member name="T:Vintasoft.Imaging.Drawing.Gdi.GdiLinearGradientBrush">
+            <summary>
+            Defines the linear gradient brush, which is based on <see cref="T:System.Drawing.Drawing2D.LinearGradientBrush" /> and paints an area with a linear gradient.
+            </summary>
+        </member>
+        <member name="M:Vintasoft.Imaging.Drawing.Gdi.GdiLinearGradientBrush.#ctor(System.Drawing.RectangleF,Vintasoft.Imaging.Drawing.GradientStop[])">
+            <summary>
+            Initializes a new instance of the <see cref="T:Vintasoft.Imaging.Drawing.Gdi.GdiLinearGradientBrush" /> class.
+            </summary>
+            <param name="rectangle">A <see cref="T:System.Drawing.RectangleF" /> structure that specifies the bounds of the linear gradient.</param>
+            <param name="gradientStops">The gradient stops of the brush.</param>
+            <exception cref="T:System.ArgumentNullException">Thrown if <i>gradientStops</i> is <b>null</b>.</exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">Thrown if <i>gradientStops</i> length is less than 2.</exception>
+        </member>
+        <member name="P:Vintasoft.Imaging.Drawing.Gdi.GdiLinearGradientBrush.Rectangle">
+            <summary>
+            Gets the starting two-dimensional coordinates of the linear gradient.
+            </summary>
+        </member>
+        <member name="P:Vintasoft.Imaging.Drawing.Gdi.GdiLinearGradientBrush.GradientStops">
+            <summary>
+            Gets or sets the gradient stops of the brush.
+            </summary>
+        </member>
+        <member name="P:Vintasoft.Imaging.Drawing.Gdi.GdiLinearGradientBrush.TileMode">
+            <summary>
+            Gets or sets the tile mode of this linear gradient brush.
+            </summary>
+        </member>
+        <member name="P:Vintasoft.Imaging.Drawing.Gdi.GdiLinearGradientBrush.Transform">
+            <summary>
+            Gets or sets the transform that defines a local geometric 
+            transformation for the image associated with this linear gradient brush.
+            </summary>
+        </member>
+        <member name="M:Vintasoft.Imaging.Drawing.Gdi.GdiLinearGradientBrush.GetHashCode">
+            <summary>
+            Serves as a hash function for a particular type.
+            </summary>
+            <returns>A hash code for the current object.</returns>
+        </member>
+        <member name="M:Vintasoft.Imaging.Drawing.Gdi.GdiLinearGradientBrush.Equals(System.Object)">
+            <summary>
+            Determines whether the specified <see cref="T:System.Object" /> is equal to the current color.
+            </summary>
+            <param name="obj">The <see cref="T:System.Object" /> to compare with the current color.</param>
+            <returns>
+            <b>True</b> if the specified <see cref="T:System.Object" /> is equal to the current color; otherwise, <b>false</b>.
+            </returns>
+        </member>
+        <member name="M:Vintasoft.Imaging.Drawing.Gdi.GdiLinearGradientBrush.Clone">
+            <summary>
+            Creates a new <see cref="T:Vintasoft.Imaging.Drawing.Gdi.GdiSolidBrush" /> that is a copy of the current
+            instance.
+            </summary>
+            <returns>
+            A new <see cref="T:Vintasoft.Imaging.Drawing.Gdi.GdiSolidBrush" /> that is a copy of this
+            instance.
+            </returns>
+        </member>
+        <member name="M:Vintasoft.Imaging.Drawing.Gdi.GdiLinearGradientBrush.CopyTo(System.Object)">
+            <summary>
+            Copies current <see cref="T:Vintasoft.Imaging.Drawing.Gdi.GdiBrush" /> to the target <see cref="T:Vintasoft.Imaging.Drawing.Gdi.GdiBrush" />.
+            </summary>
+            <param name="obj"><see cref="T:Vintasoft.Imaging.Drawing.Gdi.GdiBrush" /> to copy.</param>
+        </member>
+        <member name="T:Vintasoft.Imaging.Drawing.Gdi.GdiPen">
+            <summary>
+            Defines the pen based on <see cref="T:System.Drawing.Pen" /> that used to draw lines and curves.
+            </summary>
+        </member>
+        <member name="P:Vintasoft.Imaging.Drawing.Gdi.GdiPen.Source">
+            <summary>
+            Gets the source object of this pen.
+            </summary>
+        </member>
+        <member name="P:Vintasoft.Imaging.Drawing.Gdi.GdiPen.Color">
+            <summary>
+            Gets or sets the color of this pen.
+            </summary>
+        </member>
+        <member name="P:Vintasoft.Imaging.Drawing.Gdi.GdiPen.Brush">
+            <summary>
+            Gets or sets the brush that determines attributes of this pen.
+            </summary>
+        </member>
+        <member name="P:Vintasoft.Imaging.Drawing.Gdi.GdiPen.Width">
+            <summary>
+            Gets or sets the width of this pen.
+            </summary>
+        </member>
+        <member name="P:Vintasoft.Imaging.Drawing.Gdi.GdiPen.DashOffset">
+            <summary>
+            Gets or sets the distance from the start of a line to the beginning of a dash pattern.
+            </summary>
+        </member>
+        <member name="P:Vintasoft.Imaging.Drawing.Gdi.GdiPen.DashPattern">
+            <summary>
+            Gets or sets an array of dashes and spaces.
+            </summary>
+        </member>
+        <member name="P:Vintasoft.Imaging.Drawing.Gdi.GdiPen.MiterLimit">
+            <summary>
+            Gets or sets the limit of the thickness of the join on a mitered corner.
+            </summary>
+        </member>
+        <member name="P:Vintasoft.Imaging.Drawing.Gdi.GdiPen.DashCap">
+            <summary>
+            Gets or sets the cap style used at the end of the dashes that make up dashed lines drawn with this pen.
+            </summary>
+        </member>
+        <member name="P:Vintasoft.Imaging.Drawing.Gdi.GdiPen.LineJoin">
+            <summary>
+            Gets or sets the join style for the ends of two consecutive lines drawn with this pen.
+            </summary>
+        </member>
+        <member name="P:Vintasoft.Imaging.Drawing.Gdi.GdiPen.LineCap">
+            <summary>
+            Gets or sets the cap style used at start and end of drawn lines.
+            </summary>
+        </member>
+        <member name="M:Vintasoft.Imaging.Drawing.Gdi.GdiPen.GetHashCode">
+            <summary>
+            Serves as a hash function for a particular type.
+            </summary>
+            <returns>A hash code for the current object.</returns>
+        </member>
+        <member name="M:Vintasoft.Imaging.Drawing.Gdi.GdiPen.Equals(System.Object)">
+            <summary>
+            Determines whether the specified <see cref="T:System.Object" /> is equal to the current color.
+            </summary>
+            <param name="obj">The <see cref="T:System.Object" /> to compare with the current color.</param>
+            <returns>
+            <b>True</b> if the specified <see cref="T:System.Object" /> is equal to the current color; otherwise, <b>false</b>.
+            </returns>
+        </member>
+        <member name="M:Vintasoft.Imaging.Drawing.Gdi.GdiPen.Clone">
+            <summary>
+            Creates a new <see cref="T:Vintasoft.Imaging.Drawing.Gdi.GdiPen" /> that is a copy of the current
+            instance.
+            </summary>
+            <returns>
+            A new <see cref="T:Vintasoft.Imaging.Drawing.Gdi.GdiPen" /> that is a copy of this
+            instance.
+            </returns>
+        </member>
+        <member name="M:Vintasoft.Imaging.Drawing.Gdi.GdiPen.Dispose">
+            <summary>
+            Releases all resources used by this <see cref="T:Vintasoft.Imaging.Drawing.Gdi.GdiPen" /> object.
+            </summary>
+        </member>
+        <member name="T:Vintasoft.Imaging.Drawing.Gdi.GdiRegion">
+            <summary>
+            Defines the region based on <see cref="T:System.Drawing.Region" /> that used to describe the interior of a graphics shape composed of rectangles and paths.
+            </summary>
+        </member>
+        <member name="P:Vintasoft.Imaging.Drawing.Gdi.GdiRegion.Source">
+            <summary>
+            Gets the source object of this region.
+            </summary>
+        </member>
+        <member name="M:Vintasoft.Imaging.Drawing.Gdi.GdiRegion.Clone">
+            <summary>
+            Creates a new <see cref="T:Vintasoft.Imaging.Drawing.Gdi.GdiRegion" /> that is a copy of the current
+            instance.
+            </summary>
+            <returns>
+            A new <see cref="T:Vintasoft.Imaging.Drawing.Gdi.GdiRegion" /> that is a copy of this
+            instance.
+            </returns>
+        </member>
+        <member name="M:Vintasoft.Imaging.Drawing.Gdi.GdiRegion.Dispose">
+            <summary>
+            Releases all resources used by this <see cref="T:Vintasoft.Imaging.Drawing.Gdi.GdiRegion" /> object.
+            </summary>
+        </member>
+        <member name="M:Vintasoft.Imaging.Drawing.Gdi.GdiRegion.MakeEmpty">
+            <summary>
+            Initializes this region to an empty interior.
+            </summary>
+        </member>
+        <member name="M:Vintasoft.Imaging.Drawing.Gdi.GdiRegion.MakeInfinite">
+            <summary>
+            Initializes this region object to an infinite interior.
+            </summary>
+        </member>
+        <member name="M:Vintasoft.Imaging.Drawing.Gdi.GdiRegion.GetBounds">
+            <summary>
+            Returns a rectangle that bounds this region.
+            </summary>
+            <returns>
+            A rectangle that bounds this region.
+            </returns>
+        </member>
+        <member name="M:Vintasoft.Imaging.Drawing.Gdi.GdiRegion.Combine(Vintasoft.Imaging.Drawing.IGraphicsPath,Vintasoft.Imaging.Drawing.RegionCombineMode)">
+            <summary>
+            Combines this region with the specified graphics path.
+            </summary>
+            <param name="path">The graphics path to combine.</param>
+            <param name="mode">The combine mode.</param>
+        </member>
+        <member name="M:Vintasoft.Imaging.Drawing.Gdi.GdiRegion.Combine(Vintasoft.Imaging.Drawing.IRegion,Vintasoft.Imaging.Drawing.RegionCombineMode)">
+            <summary>
+            Combines this region with the specified region.
+            </summary>
+            <param name="region">The region to combine.</param>
+            <param name="mode">The combine mode.</param>
+        </member>
+        <member name="M:Vintasoft.Imaging.Drawing.Gdi.GdiRegion.Combine(System.Drawing.RectangleF,Vintasoft.Imaging.Drawing.RegionCombineMode)">
+            <summary>
+            Combines this region with the specified rectangle.
+            </summary>
+            <param name="rect">The rectangle to combine.</param>
+            <param name="mode">The combine mode.</param>
+        </member>
+        <member name="M:Vintasoft.Imaging.Drawing.Gdi.GdiRegion.Transform(Vintasoft.Imaging.AffineMatrix)">
+            <summary>
+            Applies a transform matrix to this rgion.
+            </summary>
+            <param name="matrix">A <see cref="T:Vintasoft.Imaging.AffineMatrix" /> that represents the transformation to apply.</param>
+        </member>
+        <member name="M:Vintasoft.Imaging.Drawing.Gdi.GdiRegion.GetRegionScans(Vintasoft.Imaging.AffineMatrix)">
+            <summary>
+            Returns an array of <see cref="T:System.Drawing.RectangleF" /> structures that approximate this region after the specified matrix transformation is applied.
+            </summary>
+            <param name="matrix">A <see cref="T:Vintasoft.Imaging.AffineMatrix" /> that represents a geometric transformation to apply to the region.</param>
+            <returns>
+            An array of <see cref="T:System.Drawing.RectangleF" /> structures that approximate this region after the specified matrix transformation is applied.
+            </returns>
+        </member>
+        <member name="M:Vintasoft.Imaging.Drawing.Gdi.GdiRegion.IsVisible(System.Drawing.RectangleF)">
+            <summary>
+            Tests whether the specified <see cref="T:System.Drawing.RectangleF" /> structure is contained within this region.
+            </summary>
+            <param name="rect">The <see cref="T:System.Drawing.RectangleF" /> structure to test.</param>
+            <returns>
+              <b>True</b> when any portion of rect is contained within this region; otherwise, <b>false</b>.
+            </returns>
+        </member>
+        <member name="M:Vintasoft.Imaging.Drawing.Gdi.GdiRegion.IsVisible(System.Drawing.PointF)">
+            <summary>
+            Tests whether the specified <see cref="T:System.Drawing.PointF" /> structure is contained within this region.
+            </summary>
+            <param name="point">The <see cref="T:System.Drawing.PointF" /> structure to test.</param>
+            <returns>
+              <b>True</b> when <paramref name="point" /> is contained within this region; otherwise, <b>false</b>.
+            </returns>
+        </member>
+        <member name="T:Vintasoft.Imaging.Drawing.Gdi.GdiSolidBrush">
+            <summary>
+            Defines the solid brush based on <see cref="T:System.Drawing.SolidBrush" /> that is used to 
+            fill the interiors of graphical shapes use single color.
+            </summary>
+        </member>
+        <member name="M:Vintasoft.Imaging.Drawing.Gdi.GdiSolidBrush.#ctor(Vintasoft.Imaging.ImageColors.ColorBase)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Vintasoft.Imaging.Drawing.Gdi.GdiSolidBrush" /> class.
+            </summary>
+            <param name="color">The brush color.</param>
+            <exception cref="T:System.ArgumentNullException"> Thrown if <i>color</i> is <b>null</b>.</exception>
+        </member>
+        <member name="P:Vintasoft.Imaging.Drawing.Gdi.GdiSolidBrush.Color">
+            <summary>
+            Gets or sets the color of the brush.
+            </summary>
+        </member>
+        <member name="M:Vintasoft.Imaging.Drawing.Gdi.GdiSolidBrush.GetHashCode">
+            <summary>
+            Serves as a hash function for a particular type.
+            </summary>
+            <returns>A hash code for the current object.</returns>
+        </member>
+        <member name="M:Vintasoft.Imaging.Drawing.Gdi.GdiSolidBrush.Equals(System.Object)">
+            <summary>
+            Determines whether the specified <see cref="T:System.Object" /> is equal to the current color.
+            </summary>
+            <param name="obj">The <see cref="T:System.Object" /> to compare with the current color.</param>
+            <returns>
+            <b>True</b> if the specified <see cref="T:System.Object" /> is equal to the current color; otherwise, <b>false</b>.
+            </returns>
+        </member>
+        <member name="M:Vintasoft.Imaging.Drawing.Gdi.GdiSolidBrush.Clone">
+            <summary>
+            Creates a new <see cref="T:Vintasoft.Imaging.Drawing.Gdi.GdiSolidBrush" /> that is a copy of the current
+            instance.
+            </summary>
+            <returns>
+            A new <see cref="T:Vintasoft.Imaging.Drawing.Gdi.GdiSolidBrush" /> that is a copy of this
+            instance.
+            </returns>
+        </member>
+        <member name="T:Vintasoft.Imaging.Metadata.EmfMetadata">
+            <summary>
+            Root node of tree which stores metadata of EMF page.
+            </summary>
+            <remarks>
+            This node cannot have child nodes.
+            </remarks>
+        </member>
+        <member name="P:Vintasoft.Imaging.Metadata.EmfMetadata.ImageWidth">
+            <summary>
+            Gets the width, in pixels, of image.
+            </summary>        
+        </member>
+        <member name="P:Vintasoft.Imaging.Metadata.EmfMetadata.ImageHeight">
+            <summary>
+            Gets the height, in pixels, of image.
+            </summary>        
+        </member>
+        <member name="P:Vintasoft.Imaging.Metadata.EmfMetadata.BitsPerPixel">
+            <summary>
+            Gets the bit depth of image returned by decoder.
+            </summary>      
+        </member>
+        <member name="P:Vintasoft.Imaging.Metadata.EmfMetadata.Resolution">
+            <summary>
+            Gets or sets the resolution, in pixels per inch.
+            </summary>
+            <value>
+            The resolution loaded from an image metadata if <see cref="P:Vintasoft.Imaging.Metadata.EmfMetadata.HasResolution" /> returns <b>true</b>;
+            otherwise, the default (screen) resolution.
+            </value>
+            <seealso cref="P:Vintasoft.Imaging.Metadata.EmfMetadata.HasResolution" />
+        </member>
+        <member name="P:Vintasoft.Imaging.Metadata.EmfMetadata.HasResolution">
+            <summary>
+            Gets a value indicating whether the information about image resolution is stored
+            in an EMF page.
+            </summary>
+            <value>
+            <b>True</b> - the <see cref="P:Vintasoft.Imaging.Metadata.EmfMetadata.Resolution" /> property returns resolution loaded from image file;<br />
+            <b>false</b> - the <see cref="P:Vintasoft.Imaging.Metadata.EmfMetadata.Resolution" /> property returns the default (screen) resolution.
+            </value>
+            <seealso cref="P:Vintasoft.Imaging.Metadata.EmfMetadata.Resolution" />
+        </member>
+        <member name="T:Vintasoft.Imaging.Metadata.WmfMetadata">
+            <summary>
+            Root node of tree which stores metadata of WMF page.
+            </summary>
+            <remarks>
+            This node cannot have child nodes.
+            </remarks>
+        </member>
+        <member name="P:Vintasoft.Imaging.Metadata.WmfMetadata.ImageWidth">
+            <summary>
+            Gets the width, in pixels, of image.
+            </summary>        
+        </member>
+        <member name="P:Vintasoft.Imaging.Metadata.WmfMetadata.ImageHeight">
+            <summary>
+            Gets the height, in pixels, of image.
+            </summary>        
+        </member>
+        <member name="P:Vintasoft.Imaging.Metadata.WmfMetadata.BitsPerPixel">
+            <summary>
+            Gets the bit depth of image returned by decoder.
+            </summary>      
+        </member>
+        <member name="P:Vintasoft.Imaging.Metadata.WmfMetadata.Resolution">
+            <summary>
+            Gets or sets the resolution, in pixels per inch.
+            </summary>
+            <value>
+            The resolution loaded from an image metadata if <see cref="P:Vintasoft.Imaging.Metadata.WmfMetadata.HasResolution" /> returns <b>true</b>;
+            otherwise, the default (screen) resolution.
+            </value>
+            <seealso cref="P:Vintasoft.Imaging.Metadata.WmfMetadata.HasResolution" />
+        </member>
+        <member name="P:Vintasoft.Imaging.Metadata.WmfMetadata.HasResolution">
+            <summary>
+            Gets a value indicating whether the information about image resolution is stored
+            in a WMF page.
+            </summary>
+            <value>
+            <b>True</b> - the <see cref="P:Vintasoft.Imaging.Metadata.WmfMetadata.Resolution" /> property returns resolution loaded from image file;<br />
+            <b>false</b> - the <see cref="P:Vintasoft.Imaging.Metadata.WmfMetadata.Resolution" /> property returns the default (screen) resolution.
+            </value>
+            <seealso cref="P:Vintasoft.Imaging.Metadata.WmfMetadata.Resolution" />
+        </member>
+        <member name="T:Vintasoft.Imaging.Print.ImagePrintDocument">
+            <summary>
+            Sends output images to a printer.
+            </summary>
+            <example>This C#/VB.NET code shows how to print a multipage TIFF file. Each image will be resized to fill the page.
+            <code lang="VB.NET">
+            Public Class Form1
+                Inherits System.Windows.Forms.Form
+            
+                #Region "Fields"
+            
+                Private _currentPage As Integer
+                Private _imageCollection1 As Vintasoft.Imaging.ImageCollection
+            
+                #End Region
+            
+            
+            
+                #Region "Constructors"
+            
+                Public Sub New()
+                    Dim imagePrintDocument1 As New Vintasoft.Imaging.Print.ImagePrintDocument()
+                    imagePrintDocument1.PrintScaleMode = Vintasoft.Imaging.Print.PrintScaleMode.BestFit
+                    imagePrintDocument1.Center = True
+                    AddHandler imagePrintDocument1.PrintImage, New System.EventHandler(Of Vintasoft.Imaging.Print.PrintImageEventArgs)(AddressOf imagePrintDocument1_PrintImage)
+            
+                    _imageCollection1 = New Vintasoft.Imaging.ImageCollection()
+                    _imageCollection1.Add("c:\multipage.tif")
+            
+                    Dim printDialog1 As New System.Windows.Forms.PrintDialog()
+                    printDialog1.Document = imagePrintDocument1
+                    If printDialog1.ShowDialog() = System.Windows.Forms.DialogResult.OK Then
+                        ' do not use margins
+                        Dim pageMargins As New System.Drawing.Printing.Margins(0, 0, 0, 0)
+                        imagePrintDocument1.DefaultPageSettings.Margins = pageMargins
+            
+                        ' print the image
+                        imagePrintDocument1.Print()
+                    End If
+                End Sub
+            
+                #End Region
+            
+            
+            
+                #Region "Methods"
+            
+                ' The PrintImage event is raised for each page to be printed.
+                Private Sub imagePrintDocument1_PrintImage(sender As Object, e As Vintasoft.Imaging.Print.PrintImageEventArgs)
+                    If _currentPage &lt; _imageCollection1.Count Then
+                        e.Image = _imageCollection1(_currentPage)
+            
+                        _currentPage += 1
+                        If _currentPage &gt;= _imageCollection1.Count Then
+                            e.HasMoreImages = False
+                            _currentPage = 0
+                        Else
+                            e.HasMoreImages = True
+                        End If
+                    End If
+                End Sub
+            
+                #End Region
+            
+            End Class
+            </code>
+            <code lang="C#">
+            public class Form1 : System.Windows.Forms.Form
+            {
+            
+                #region Fields
+            
+                int _currentPage;
+                Vintasoft.Imaging.ImageCollection _imageCollection1;
+            
+                #endregion
+            
+            
+            
+                #region Constructors
+            
+                public Form1()
+                {
+                    Vintasoft.Imaging.Print.ImagePrintDocument imagePrintDocument1 =
+                        new Vintasoft.Imaging.Print.ImagePrintDocument();
+                    imagePrintDocument1.PrintScaleMode = Vintasoft.Imaging.Print.PrintScaleMode.BestFit;
+                    imagePrintDocument1.Center = true;
+                    imagePrintDocument1.PrintImage +=
+                        new System.EventHandler&lt;Vintasoft.Imaging.Print.PrintImageEventArgs&gt;(imagePrintDocument1_PrintImage);
+            
+                    _imageCollection1 = new Vintasoft.Imaging.ImageCollection();
+                    _imageCollection1.Add(@"c:\multipage.tif");
+            
+                    System.Windows.Forms.PrintDialog printDialog1 = new System.Windows.Forms.PrintDialog();
+                    printDialog1.Document = imagePrintDocument1;
+                    if (printDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                    {
+                        // do not use margins
+                        System.Drawing.Printing.Margins pageMargins =
+                            new System.Drawing.Printing.Margins(0, 0, 0, 0);
+                        imagePrintDocument1.DefaultPageSettings.Margins = pageMargins;
+            
+                        // print the image
+                        imagePrintDocument1.Print();
+                    }
+                }
+            
+                #endregion
+            
+            
+            
+                #region Methods
+            
+                // The PrintImage event is raised for each page to be printed.
+                void imagePrintDocument1_PrintImage(object sender, Vintasoft.Imaging.Print.PrintImageEventArgs e)
+                {
+                    if (_currentPage &lt; _imageCollection1.Count)
+                    {
+                        e.Image = _imageCollection1[_currentPage];
+            
+                        _currentPage++;
+                        if (_currentPage &gt;= _imageCollection1.Count)
+                        {
+                            e.HasMoreImages = false;
+                            _currentPage = 0;
+                        }
+                        else
+                        {
+                            e.HasMoreImages = true;
+                        }
+                    }
+                }
+            
+                #endregion
+            
+            }
+            </code>
+            </example>
+            <seealso cref="P:Vintasoft.Imaging.Print.ImagePrintDocument.UseVectorRendering" />
+        </member>
+        <member name="M:Vintasoft.Imaging.Print.ImagePrintDocument.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Vintasoft.Imaging.Print.ImagePrintDocument" /> class.
+            </summary>
+            <example>This C#/VB.NET code shows how to print a multipage TIFF file. Each image
+            will be resized to fill the page.
+            <code lang="VB.NET">
+            Public Class Form1
+                Inherits System.Windows.Forms.Form
+            
+                #Region "Fields"
+            
+                Private _currentPage As Integer
+                Private _imageCollection1 As Vintasoft.Imaging.ImageCollection
+            
+                #End Region
+            
+            
+            
+                #Region "Constructors"
+            
+                Public Sub New()
+                    Dim imagePrintDocument1 As New Vintasoft.Imaging.Print.ImagePrintDocument()
+                    imagePrintDocument1.PrintScaleMode = Vintasoft.Imaging.Print.PrintScaleMode.BestFit
+                    imagePrintDocument1.Center = True
+                    AddHandler imagePrintDocument1.PrintImage, New System.EventHandler(Of Vintasoft.Imaging.Print.PrintImageEventArgs)(AddressOf imagePrintDocument1_PrintImage)
+            
+                    _imageCollection1 = New Vintasoft.Imaging.ImageCollection()
+                    _imageCollection1.Add("c:\multipage.tif")
+            
+                    Dim printDialog1 As New System.Windows.Forms.PrintDialog()
+                    printDialog1.Document = imagePrintDocument1
+                    If printDialog1.ShowDialog() = System.Windows.Forms.DialogResult.OK Then
+                        ' do not use margins
+                        Dim pageMargins As New System.Drawing.Printing.Margins(0, 0, 0, 0)
+                        imagePrintDocument1.DefaultPageSettings.Margins = pageMargins
+            
+                        ' print the image
+                        imagePrintDocument1.Print()
+                    End If
+                End Sub
+            
+                #End Region
+            
+            
+            
+                #Region "Methods"
+            
+                ' The PrintImage event is raised for each page to be printed.
+                Private Sub imagePrintDocument1_PrintImage(sender As Object, e As Vintasoft.Imaging.Print.PrintImageEventArgs)
+                    If _currentPage &lt; _imageCollection1.Count Then
+                        e.Image = _imageCollection1(_currentPage)
+            
+                        _currentPage += 1
+                        If _currentPage &gt;= _imageCollection1.Count Then
+                            e.HasMoreImages = False
+                            _currentPage = 0
+                        Else
+                            e.HasMoreImages = True
+                        End If
+                    End If
+                End Sub
+            
+                #End Region
+            
+            End Class
+            </code>
+            <code lang="C#">
+            public class Form1 : System.Windows.Forms.Form
+            {
+            
+                #region Fields
+            
+                int _currentPage;
+                Vintasoft.Imaging.ImageCollection _imageCollection1;
+            
+                #endregion
+            
+            
+            
+                #region Constructors
+            
+                public Form1()
+                {
+                    Vintasoft.Imaging.Print.ImagePrintDocument imagePrintDocument1 =
+                        new Vintasoft.Imaging.Print.ImagePrintDocument();
+                    imagePrintDocument1.PrintScaleMode = Vintasoft.Imaging.Print.PrintScaleMode.BestFit;
+                    imagePrintDocument1.Center = true;
+                    imagePrintDocument1.PrintImage +=
+                        new System.EventHandler&lt;Vintasoft.Imaging.Print.PrintImageEventArgs&gt;(imagePrintDocument1_PrintImage);
+            
+                    _imageCollection1 = new Vintasoft.Imaging.ImageCollection();
+                    _imageCollection1.Add(@"c:\multipage.tif");
+            
+                    System.Windows.Forms.PrintDialog printDialog1 = new System.Windows.Forms.PrintDialog();
+                    printDialog1.Document = imagePrintDocument1;
+                    if (printDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                    {
+                        // do not use margins
+                        System.Drawing.Printing.Margins pageMargins =
+                            new System.Drawing.Printing.Margins(0, 0, 0, 0);
+                        imagePrintDocument1.DefaultPageSettings.Margins = pageMargins;
+            
+                        // print the image
+                        imagePrintDocument1.Print();
+                    }
+                }
+            
+                #endregion
+            
+            
+            
+                #region Methods
+            
+                // The PrintImage event is raised for each page to be printed.
+                void imagePrintDocument1_PrintImage(object sender, Vintasoft.Imaging.Print.PrintImageEventArgs e)
+                {
+                    if (_currentPage &lt; _imageCollection1.Count)
+                    {
+                        e.Image = _imageCollection1[_currentPage];
+            
+                        _currentPage++;
+                        if (_currentPage &gt;= _imageCollection1.Count)
+                        {
+                            e.HasMoreImages = false;
+                            _currentPage = 0;
+                        }
+                        else
+                        {
+                            e.HasMoreImages = true;
+                        }
+                    }
+                }
+            
+                #endregion
+            
+            }
+            </code>
+            </example>
+        </member>
+        <member name="P:Vintasoft.Imaging.Print.ImagePrintDocument.UseVectorRendering">
+            <summary>
+            Gets or sets a value indicating whether vector rendering must be used for printing of PDF and DOCX pages.
+            </summary>
+            <value>
+            <b>True</b> - vector rendering must be used for printing of PDF, DOCX and XLSX pages;
+            <b>false</b> - raster rendering must be used for printing of PDF, DOCX and XLSX pages.<br />
+            Default value is <b>true</b>.
+            </value>
+        </member>
+        <member name="P:Vintasoft.Imaging.Print.ImagePrintDocument.UseImageAutoOrienation">
+            <summary>
+            Gets or sets a value indicating whether the print document must select the image orientation automatically by aspect ratio of image and printable area (only in BestFit mode).
+            </summary>
+            <value>
+            <b>True</b> - image orientation is selected automatically by aspect ratio of image and printable area (only in BestFit mode);
+            <b>false</b> - image orientation is not changed.<br />
+            Default value is <b>false</b>.
+            </value>
+            <remarks>
+            This property affects only in <see cref="P:Vintasoft.Imaging.Print.ImagePrintDocument.PrintScaleMode" />.BestFit mode.
+            </remarks>
+        </member>
+        <member name="P:Vintasoft.Imaging.Print.ImagePrintDocument.PrintScaleMode">
+            <summary>
+            Gets or sets a value indicating how to scale image.
+            </summary>
+            <value>Default value is <see cref="P:Vintasoft.Imaging.Print.ImagePrintDocument.PrintScaleMode" />.None.</value>
+        </member>
+        <member name="P:Vintasoft.Imaging.Print.ImagePrintDocument.MosaicColumnCount">
+            <summary>
+            Gets or sets the number of images displayed horizontally across the page.
+            </summary>
+            <value>Default value is 1.</value>
+        </member>
+        <member name="P:Vintasoft.Imaging.Print.ImagePrintDocument.MosaicRowCount">
+            <summary>
+            Gets or sets the number of images displayed vertically down the page.
+            </summary>
+            <value>Default value is 1.</value>
+        </member>
+        <member name="P:Vintasoft.Imaging.Print.ImagePrintDocument.DistanceBetweenImages">
+            <summary>
+            Gets or sets space between images, in hundredths of an inch.
+            </summary>
+            <value>Default value is 5.</value>
+        </member>
+        <member name="P:Vintasoft.Imaging.Print.ImagePrintDocument.Center">
+            <summary>
+            Gets or sets a value indicating whether the image is centered on page.
+            </summary>
+            <value>Default value is <b>false</b>.</value>
+        </member>
+        <member name="P:Vintasoft.Imaging.Print.ImagePrintDocument.PrintedPageCount">
+            <summary>
+            Gets counter of printed pages.
+            </summary>
+            <value>Default value: 0.</value>
+            <remarks>
+            Printed image will be divided to some pages in the
+            <see cref="P:Vintasoft.Imaging.Print.ImagePrintDocument.PrintScaleMode" />.None mode if size of the printed
+            image is bigger than size of printer's page and this property
+            allows to get counter of pages for the image.
+            </remarks>
+        </member>
+        <member name="P:Vintasoft.Imaging.Print.ImagePrintDocument.AntiAliasing">
+            <summary>
+            Gets or sets a value indicating whether the antialiased rendering is enabled.
+            </summary>
+            <value>Default value is <b>true</b>.</value>
+        </member>
+        <member name="M:Vintasoft.Imaging.Print.ImagePrintDocument.OnBeginPrint(System.Drawing.Printing.PrintEventArgs)">
+            <summary>
+            Raises the <see cref="E:System.Drawing.Printing.PrintDocument.BeginPrint" /> event. It is called after
+            the <see cref="M:System.Drawing.Printing.PrintDocument.Print" /> method is called and before the first page of the document prints.
+            </summary>
+            <param name="e">A <see cref="T:System.Drawing.Printing.PrintEventArgs" /> that contains the event data.</param>
+        </member>
+        <member name="M:Vintasoft.Imaging.Print.ImagePrintDocument.OnPrintPage(System.Drawing.Printing.PrintPageEventArgs)">
+            <summary>
+            Raises the <see cref="E:System.Drawing.Printing.PrintDocument.PrintPage" /> event. It is called before a page prints.
+            </summary>
+            <param name="e">A <see cref="T:System.Drawing.Printing.PrintPageEventArgs" /> that contains the event data.</param>
+        </member>
+        <member name="M:Vintasoft.Imaging.Print.ImagePrintDocument.BeginPrintImage(Vintasoft.Imaging.VintasoftImage,Vintasoft.Imaging.Codecs.Decoders.RenderingSettings)">
+            <summary>
+            Begins the image printing and allows to initialize the printing settings.
+            </summary>
+            <param name="image">Image to print.</param>
+            <param name="renderingSettings">Image rendering settings.</param>
+        </member>
+        <member name="M:Vintasoft.Imaging.Print.ImagePrintDocument.DrawImage(Vintasoft.Imaging.VintasoftImage,System.Drawing.Graphics,System.Drawing.RectangleF,System.Drawing.RectangleF,System.Single,System.Single,System.Boolean)">
+            <summary>
+            Draws the specified rectangular area of <see cref="T:Vintasoft.Imaging.VintasoftImage" /> on
+            the specified rectangular area of page's <see cref="T:System.Drawing.Graphics" />.
+            </summary>
+            <param name="image">An image to draw.</param>
+            <param name="graphics">Page's graphics, where image should be drawn.</param>
+            <param name="sourceRect">
+            The rectangular area, in device-independent pixels (1/96th inch), of image to draw.</param>
+            <param name="destRect">
+            The rectangular area, in pixels, of page's graphics, where image should be drawn.
+            </param>
+            <param name="printerResolutionX">The resolution of printer along X-axis.</param>
+            <param name="printerResolutionY">The resolution of printer along Y-axis.</param>
+            <param name="landscape">A value indicating whether print document must draw image in landscape mode.</param>
+        </member>
+        <member name="M:Vintasoft.Imaging.Print.ImagePrintDocument.NeedsUseLandcapeImageOrientation(Vintasoft.Imaging.VintasoftImage,Vintasoft.Imaging.ImageSize)">
+            <summary>
+            Returns a value indicating whether the specified image must be printed in landscape mode.
+            </summary>
+            <param name="image">The image.</param>
+            <param name="printArea">The printable area.</param>
+            <returns>
+            <b>True</b> - specified image must be printed in landscape mode;
+            <b>false</b> - specified image must be printed in normal mode.
+            </returns>
+        </member>
+        <member name="M:Vintasoft.Imaging.Print.ImagePrintDocument.NeedsVectorPrinting(Vintasoft.Imaging.VintasoftImage)">
+            <summary>
+            Returns a value indicating whether the specified image must be printed in vector mode.
+            </summary>
+            <param name="image">The image.</param>
+            <returns>
+            <b>True</b> - image can be printed in vector mode;<br />
+            <b>false</b> - image must be renrasterized before printing.
+            </returns>
+        </member>
+        <member name="M:Vintasoft.Imaging.Print.ImagePrintDocument.EndPrintImage(Vintasoft.Imaging.VintasoftImage)">
+            <summary>
+            Ends the image printing and
+            allows to release resources, which was used during printing.
+            </summary>
+            <param name="image">The printed image.</param>
+        </member>
+        <member name="E:Vintasoft.Imaging.Print.ImagePrintDocument.PrintImage">
+            <summary>
+            Occurs when printer needs next image to print.
+            </summary>
+        </member>
+        <member name="E:Vintasoft.Imaging.Print.ImagePrintDocument.ImagePrinting">
+            <summary>
+            Occurs when an image is being printed on the page.
+            </summary>
+        </member>
+        <member name="E:Vintasoft.Imaging.Print.ImagePrintDocument.ImagePrinted">
+            <summary>
+            Occurs when an image has been printed on the page.
+            </summary>
+            <remarks>
+            Printed image can be disposed after this event if image is not necessary anymore.
+            </remarks>
+        </member>
+        <member name="E:Vintasoft.Imaging.Print.ImagePrintDocument.PrintingException">
+            <summary>
+            Occurs when an exception is thrown during work of this <see cref="T:Vintasoft.Imaging.Print.ImagePrintDocument" />.
+            </summary>
+        </member>
+        <member name="T:Vintasoft.Imaging.Print.PrintImageEventArgs">
+            <summary>
+            Provides data for the <see cref="E:Vintasoft.Imaging.Print.ImagePrintDocument.PrintImage" /> event.
+            </summary>
+        </member>
+        <member name="M:Vintasoft.Imaging.Print.PrintImageEventArgs.#ctor">
+            <summary>
+            Initializes a new instance of the
+            <see cref="T:Vintasoft.Imaging.Print.PrintImageEventArgs" /> class.
+            </summary>
+        </member>
+        <member name="P:Vintasoft.Imaging.Print.PrintImageEventArgs.Cancel">
+            <summary>
+            Gets or sets a value indicating whether the print job should
+            be canceled.
+            </summary>
+        </member>
+        <member name="P:Vintasoft.Imaging.Print.PrintImageEventArgs.HasMoreImages">
+            <summary>
+            Gets or sets a value indicating whether an additional image
+            should be printed.
+            </summary>
+        </member>
+        <member name="P:Vintasoft.Imaging.Print.PrintImageEventArgs.Image">
+            <summary>
+            Gets or sets the image that should be printed.
+            </summary>
+        </member>
+        <member name="T:Vintasoft.Imaging.GdiBitmapWrapper">
+            <summary>
+            Provides a wrapper of <see cref="T:Vintasoft.Imaging.VintasoftBitmap" /> that allows to use
+            <see cref="T:Vintasoft.Imaging.VintasoftBitmap" /> as <see cref="T:System.Drawing.Bitmap" />.
+            </summary>
+        </member>
+        <member name="P:Vintasoft.Imaging.GdiBitmapWrapper.Bitmap">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Bitmap" /> object, which is wrapped by the <see cref="T:Vintasoft.Imaging.VintasoftBitmap" /> object.
+            </summary>
+        </member>
+        <member name="M:Vintasoft.Imaging.GdiBitmapWrapper.CreateReadonly(Vintasoft.Imaging.VintasoftBitmap)">
+            <summary>
+            Creates read-only bitmap wrapper for specified <paramref name="bitmap" />.
+            </summary>
+            <param name="bitmap">The bitmap.</param>
+            <returns>A read-only bitmap wrapper.</returns>
+        </member>
+        <member name="M:Vintasoft.Imaging.GdiBitmapWrapper.CreateReadonly(Vintasoft.Imaging.VintasoftBitmap,System.Drawing.Rectangle)">
+            <summary>
+            Creates read-only bitmap wrapper for specified rectangle on <paramref name="bitmap" />.
+            </summary>
+            <param name="bitmap">The bitmap.</param>
+            <param name="rect">Rectangle on <paramref name="bitmap" /> to create wrapper.</param>
+            <returns>A read-only bitmap wrapper.</returns>
+        </member>
+        <member name="M:Vintasoft.Imaging.GdiBitmapWrapper.Create(Vintasoft.Imaging.VintasoftBitmap)">
+            <summary>
+            Creates a bitmap wrapper for specified <paramref name="bitmap" />.
+            </summary>
+            <param name="bitmap">The bitmap.</param>
+            <returns>A bitmap wrapper.</returns>
+        </member>
+        <member name="M:Vintasoft.Imaging.GdiBitmapWrapper.Dispose">
+            <summary>
+            Releases all resources used by this <see cref="T:Vintasoft.Imaging.GdiBitmapWrapper" /> object.
+            </summary>
+        </member>
+        <member name="T:Vintasoft.Imaging.GdiConverter">
+            <summary>
+            Contains conversion functions from/to GDI+ structures.
+            </summary>
+        </member>
+        <member name="M:Vintasoft.Imaging.GdiConverter.Convert(System.Drawing.Imaging.PixelFormat)">
+            <summary>
+            Converts <see cref="T:System.Drawing.Imaging.PixelFormat" /> from Microsoft .NET
+            to <see cref="T:Vintasoft.Imaging.PixelFormat" /> from Vintasoft.
+            </summary>
+            <param name="pixelFormat"><see cref="T:System.Drawing.Imaging.PixelFormat" /> from Microsoft .NET.</param>
+            <returns><see cref="T:Vintasoft.Imaging.PixelFormat" /> from Vintasoft.</returns>
+            <exception cref="T:System.ArgumentException">Thrown if <i>pixelFormat</i> is not supported.</exception>
+        </member>
+        <member name="M:Vintasoft.Imaging.GdiConverter.Convert(Vintasoft.Imaging.PixelFormat)">
+            <summary>
+            Converts <see cref="T:Vintasoft.Imaging.PixelFormat" /> from Vintasoft to
+            <see cref="T:System.Drawing.Imaging.PixelFormat" /> from Microsoft .NET.
+            </summary>
+            <param name="pixelFormat"><see cref="T:Vintasoft.Imaging.PixelFormat" /> from Vintasoft.</param>
+            <returns><see cref="T:System.Drawing.Imaging.PixelFormat" /> from Microsoft .NET.</returns>
+            <exception cref="T:System.ArgumentException">Thrown if <i>pixelFormat</i> is not supported.</exception>
+        </member>
+        <member name="M:Vintasoft.Imaging.GdiConverter.Convert(System.Drawing.Drawing2D.Matrix)">
+            <summary>
+            Converts a <see cref="T:System.Drawing.Drawing2D.Matrix" /> object to a <see cref="T:Vintasoft.Imaging.AffineMatrix" /> object.
+            </summary>
+            <param name="matrix">The drawing matrix to convert.</param>
+            <returns>The <see cref="T:Vintasoft.Imaging.AffineMatrix" /> object instance.</returns>
+        </member>
+        <member name="M:Vintasoft.Imaging.GdiConverter.Convert(Vintasoft.Imaging.AffineMatrix)">
+            <summary>
+            Converts an <see cref="T:Vintasoft.Imaging.AffineMatrix" /> object to a <see cref="T:System.Drawing.Drawing2D.Matrix" /> object.
+            </summary>
+            <param name="matrix">The affine matrix to convert.</param>
+            <returns>The <see cref="T:System.Drawing.Drawing2D.Matrix" /> object instance.</returns>
+        </member>
+        <member name="M:Vintasoft.Imaging.GdiConverter.Convert(System.Drawing.Drawing2D.InterpolationMode)">
+            <summary>
+            Converts <see cref="T:System.Drawing.Drawing2D.InterpolationMode" /> to <see cref="T:Vintasoft.Imaging.ImageInterpolationMode" /> enumeration.
+            </summary>
+            <param name="interpolationMode">The interpolation mode to convert.</param>
+            <returns>Converted interpolation mode.</returns>
+        </member>
+        <member name="M:Vintasoft.Imaging.GdiConverter.Convert(Vintasoft.Imaging.ImageInterpolationMode)">
+            <summary>
+            Converts <see cref="T:Vintasoft.Imaging.ImageInterpolationMode" /> to <see cref="T:System.Drawing.Drawing2D.InterpolationMode" /> enumeration.
+            </summary>
+            <param name="interpolationMode">The interpolation mode to convert.</param>
+            <returns>Converted interpolation mode.</returns>
+        </member>
+        <member name="M:Vintasoft.Imaging.GdiConverter.Convert(System.Drawing.Drawing2D.SmoothingMode)">
+            <summary>
+            Converts <see cref="T:System.Drawing.Drawing2D.SmoothingMode" /> to <see cref="T:Vintasoft.Imaging.Drawing.DrawingSmoothingMode" /> enumeration.
+            </summary>
+            <param name="smoothingMode">The smoothing mode to convert.</param>
+            <returns>Converted interpolation mode.</returns>
+        </member>
+        <member name="M:Vintasoft.Imaging.GdiConverter.Convert(Vintasoft.Imaging.Drawing.DrawingSmoothingMode)">
+            <summary>
+            Converts <see cref="T:Vintasoft.Imaging.Drawing.DrawingSmoothingMode" /> to <see cref="T:System.Drawing.Drawing2D.SmoothingMode" /> enumeration.
+            </summary>
+            <param name="smoothingMode">The smoothing mode to convert.</param>
+            <returns>Converted interpolation mode.</returns>
+        </member>
+        <member name="M:Vintasoft.Imaging.GdiConverter.Convert(System.Drawing.Drawing2D.CompositingMode)">
+            <summary>
+            Converts <see cref="T:System.Drawing.Drawing2D.CompositingMode" /> to <see cref="T:Vintasoft.Imaging.Drawing.DrawingCompositingMode" /> enumeration.
+            </summary>
+            <param name="compositingMode">The smoothing mode to convert.</param>
+            <returns>Converted interpolation mode.</returns>
+        </member>
+        <member name="M:Vintasoft.Imaging.GdiConverter.Convert(Vintasoft.Imaging.Drawing.DrawingCompositingMode)">
+            <summary>
+            Converts <see cref="T:Vintasoft.Imaging.Drawing.DrawingCompositingMode" /> to <see cref="T:System.Drawing.Drawing2D.CompositingMode" /> enumeration.
+            </summary>
+            <param name="compositingMode">The smoothing mode to convert.</param>
+            <returns>Converted interpolation mode.</returns>
+        </member>
+        <member name="M:Vintasoft.Imaging.GdiConverter.Convert(System.Drawing.Imaging.ColorPalette)">
+            <summary>
+            Converts the <see cref="T:System.Drawing.Imaging.ColorPalette" /> from Microsoft .NET
+            to the <see cref="T:Vintasoft.Imaging.Palette" /> from Vintasoft.
+            </summary>
+            <param name="palette">The <see cref="T:System.Drawing.Imaging.ColorPalette" /> from Microsoft .NET.</param>
+            <returns><see cref="T:Vintasoft.Imaging.Palette" /> from Vintasoft.</returns>
+        </member>
+        <member name="M:Vintasoft.Imaging.GdiConverter.Convert(Vintasoft.Imaging.Palette,System.Drawing.Imaging.ColorPalette)">
+            <summary>
+            Converts the <see cref="T:Vintasoft.Imaging.Palette" /> from Vintasoft to
+            the <see cref="T:System.Drawing.Imaging.ColorPalette" /> from Microsoft .NET.
+            </summary>
+            <param name="palette">The <see cref="T:Vintasoft.Imaging.Palette" /> from Vintasoft.</param>
+            <param name="colorPalette">The <see cref="T:System.Drawing.Imaging.ColorPalette" /> from Microsoft .NET.</param>
+        </member>
+        <member name="M:Vintasoft.Imaging.GdiConverter.Convert(System.Drawing.Drawing2D.WrapMode)">
+            <summary>
+            Converts the <see cref="T:System.Drawing.Drawing2D.WrapMode" /> from Microsoft .NET
+            to the <see cref="T:Vintasoft.Imaging.Drawing.BrushTileMode" /> from Vintasoft.
+            </summary>
+            <param name="wrapMode"><see cref="T:System.Drawing.Drawing2D.WrapMode" /> from Microsoft .NET.</param>
+            <returns><see cref="T:Vintasoft.Imaging.Drawing.BrushTileMode" /> from Vintasoft.</returns>
+        </member>
+        <member name="M:Vintasoft.Imaging.GdiConverter.Convert(Vintasoft.Imaging.Drawing.BrushTileMode)">
+            <summary>
+            Converts the <see cref="T:Vintasoft.Imaging.Drawing.BrushTileMode" /> from Vintasoft to
+            the <see cref="T:System.Drawing.Drawing2D.WrapMode" /> from Microsoft .NET.
+            </summary>
+            <param name="wrapMode"><see cref="T:Vintasoft.Imaging.Drawing.BrushTileMode" /> from Vintasoft.</param>
+            <returns><see cref="T:System.Drawing.Drawing2D.WrapMode" /> from Microsoft .NET.</returns>
+        </member>
+        <member name="M:Vintasoft.Imaging.GdiConverter.Convert(System.Drawing.Rectangle)">
+            <summary>
+            Converts <see cref="T:System.Drawing.Rectangle" /> to <see cref="T:Vintasoft.Primitives.VintasoftRectI" /> structure.
+            </summary>
+            <param name="rect">The point to convert.</param>
+            <returns>Converted point.</returns>
+        </member>
+        <member name="M:Vintasoft.Imaging.GdiConverter.Convert(Vintasoft.Primitives.VintasoftRectI)">
+            <summary>
+            Converts <see cref="T:Vintasoft.Primitives.VintasoftRectI" /> to <see cref="T:System.Drawing.Rectangle" /> structure.
+            </summary>
+            <param name="rect">The rectangle to convert.</param>
+            <returns>Converted point.</returns>
+        </member>
+        <member name="M:Vintasoft.Imaging.GdiConverter.Convert(System.Drawing.RectangleF)">
+            <summary>
+            Converts <see cref="T:System.Drawing.RectangleF" /> to <see cref="T:Vintasoft.Primitives.VintasoftRectF" /> structure.
+            </summary>
+            <param name="rect">The rectangle to convert.</param>
+            <returns>Converted rectangle.</returns>
+        </member>
+        <member name="M:Vintasoft.Imaging.GdiConverter.Convert(Vintasoft.Primitives.VintasoftRectF)">
+            <summary>
+            Converts <see cref="T:Vintasoft.Primitives.VintasoftRectF" /> to <see cref="T:System.Drawing.RectangleF" /> structure.
+            </summary>
+            <param name="rect">The rectangle to convert.</param>
+            <returns>Converted rectangle.</returns>
+        </member>
+        <member name="M:Vintasoft.Imaging.GdiConverter.Convert(System.Drawing.SizeF)">
+            <summary>
+            Converts <see cref="T:System.Drawing.SizeF" /> to <see cref="T:Vintasoft.Primitives.VintasoftSizeF" /> structure.
+            </summary>
+            <param name="size">The size to convert.</param>
+            <returns>Converted size.</returns>
+        </member>
+        <member name="M:Vintasoft.Imaging.GdiConverter.Convert(Vintasoft.Primitives.VintasoftSizeF)">
+            <summary>
+            Converts <see cref="T:Vintasoft.Primitives.VintasoftSizeF" /> to <see cref="T:System.Drawing.SizeF" /> structure.
+            </summary>
+            <param name="size">The size to convert.</param>
+            <returns>Converted size.</returns>
+        </member>
+        <member name="M:Vintasoft.Imaging.GdiConverter.Convert(System.Drawing.Size)">
+            <summary>
+            Converts <see cref="T:System.Drawing.Size" /> to <see cref="T:Vintasoft.Primitives.VintasoftSizeI" /> structure.
+            </summary>
+            <param name="size">The size to convert.</param>
+            <returns>Converted size.</returns>
+        </member>
+        <member name="M:Vintasoft.Imaging.GdiConverter.Convert(Vintasoft.Primitives.VintasoftSizeI)">
+            <summary>
+            Converts <see cref="T:Vintasoft.Primitives.VintasoftSizeF" /> to <see cref="T:System.Drawing.Size" /> structure.
+            </summary>
+            <param name="size">The size to convert.</param>
+            <returns>Converted size.</returns>
+        </member>
+        <member name="M:Vintasoft.Imaging.GdiConverter.Convert(System.Drawing.Point)">
+            <summary>
+            Converts <see cref="T:System.Drawing.Point" /> to <see cref="T:Vintasoft.Primitives.VintasoftPointI" /> structure.
+            </summary>
+            <param name="point">The point to convert.</param>
+            <returns>Converted point.</returns>
+        </member>
+        <member name="M:Vintasoft.Imaging.GdiConverter.Convert(Vintasoft.Primitives.VintasoftPointI)">
+            <summary>
+            Converts <see cref="T:Vintasoft.Primitives.VintasoftPointI" /> to <see cref="T:System.Drawing.Point" /> structure.
+            </summary>
+            <param name="rect">The point to convert.</param>
+            <returns>Converted point.</returns>
+        </member>
+        <member name="M:Vintasoft.Imaging.GdiConverter.Convert(System.Drawing.Point[])">
+            <summary>
+            Converts array of <see cref="T:System.Drawing.Point" /> to array of <see cref="T:Vintasoft.Primitives.VintasoftPointI" /> structure.
+            </summary>
+            <param name="points">The points to convert.</param>
+            <returns>Converted array.</returns>
+        </member>
+        <member name="M:Vintasoft.Imaging.GdiConverter.Convert(Vintasoft.Primitives.VintasoftPointI[])">
+            <summary>
+            Converts array of <see cref="T:Vintasoft.Primitives.VintasoftPointF" /> to array of <see cref="T:System.Drawing.PointF" /> structure.
+            </summary>
+            <param name="points">The points to convert.</param>
+            <returns>Converted array.</returns>
+        </member>
+        <member name="M:Vintasoft.Imaging.GdiConverter.Convert(System.Drawing.PointF)">
+            <summary>
+            Converts <see cref="T:System.Drawing.PointF" /> to <see cref="T:Vintasoft.Primitives.VintasoftPointF" /> structure.
+            </summary>
+            <param name="point">The point to convert.</param>
+            <returns>Converted point.</returns>
+        </member>
+        <member name="M:Vintasoft.Imaging.GdiConverter.Convert(Vintasoft.Primitives.VintasoftPointF)">
+            <summary>
+            Converts <see cref="T:Vintasoft.Primitives.VintasoftPointF" /> to <see cref="T:System.Drawing.PointF" /> structure.
+            </summary>
+            <param name="point">The point to convert.</param>
+            <returns>Converted point.</returns>
+        </member>
+        <member name="M:Vintasoft.Imaging.GdiConverter.Convert(System.Drawing.PointF[])">
+            <summary>
+            Converts array of <see cref="T:System.Drawing.PointF" /> to array of <see cref="T:Vintasoft.Primitives.VintasoftPointF" /> structure.
+            </summary>
+            <param name="points">The points to convert.</param>
+            <returns>Converted array.</returns>
+        </member>
+        <member name="M:Vintasoft.Imaging.GdiConverter.Convert(Vintasoft.Primitives.VintasoftPointF[])">
+            <summary>
+            Converts array of <see cref="T:Vintasoft.Primitives.VintasoftPointF" /> to array of <see cref="T:System.Drawing.PointF" /> structure.
+            </summary>
+            <param name="points">The points to convert.</param>
+            <returns>Converted array.</returns>
+        </member>
+        <member name="M:Vintasoft.Imaging.GdiConverter.Convert(System.Drawing.Color)">
+            <summary>
+            Converts <see cref="T:System.Drawing.Color" /> to <see cref="T:Vintasoft.Primitives.VintasoftColor" /> structure.
+            </summary>
+            <param name="color">The color to convert.</param>
+            <returns>Converted color.</returns>
+        </member>
+        <member name="M:Vintasoft.Imaging.GdiConverter.Convert(Vintasoft.Primitives.VintasoftColor)">
+            <summary>
+            Converts <see cref="T:Vintasoft.Primitives.VintasoftColor" /> to <see cref="T:System.Drawing.Color" /> structure.
+            </summary>
+            <param name="color">The color to convert.</param>
+            <returns>Converted color.</returns>
+        </member>
+        <member name="T:Vintasoft.Imaging.ImageCollectionGdiExtensions">
+            <summary>
+            Provides GDI extensions for <see cref="T:Vintasoft.Imaging.ImageCollection" /> class.
+            </summary>
+        </member>
+        <member name="M:Vintasoft.Imaging.ImageCollectionGdiExtensions.Insert(Vintasoft.Imaging.ImageCollection,System.Int32,System.Drawing.Image,System.Boolean)">
+            <summary>
+            Inserts an element(s) into the <see cref="T:Vintasoft.Imaging.ImageCollection" /> at the
+            specified index.
+            </summary>
+            <param name="imageCollection">The image collection.</param>
+            <param name="index">The zero-based index at which the new elements
+            should be inserted.</param>
+            <param name="image">The <see cref="T:System.Drawing.Image" /> object
+            to be added to the collection.</param>
+            <param name="disposeImageAfterUse">A value indicating whether <i>image</i> must be disposed when this
+            collection is disposed.</param>
+            <exception cref="T:System.ArgumentOutOfRangeException">Thrown if <i>index</i> is
+            less than zero.</exception>
+            <exception cref="T:System.ArgumentNullException">Thrown if <i>image</i> is <b>null</b>.</exception>
+            <remarks>
+            One <see cref="T:Vintasoft.Imaging.VintasoftImage" /> object will be added to this collection if
+            <i>image</i> is not a multipage image.<br />
+            Multiple <see cref="T:Vintasoft.Imaging.VintasoftImage" /> objects will be added to this
+            collection if <i>image</i> is a multipage GIF/TIFF image.
+            </remarks>
+        </member>
+        <member name="M:Vintasoft.Imaging.ImageCollectionGdiExtensions.Add(Vintasoft.Imaging.ImageCollection,System.Drawing.Image,System.Boolean)">
+            <summary>
+            Adds element(s) to the end of the <see cref="T:Vintasoft.Imaging.ImageCollection" />.
+            </summary>
+            <param name="imageCollection">The image collection.</param>
+            <param name="image">The <see cref="T:System.Drawing.Image" /> to be added to the
+            collection.</param>
+            <param name="disposeImageAfterUse">A value indicating whether <i>image</i> must be disposed when this
+            collection is disposed.</param>
+            <exception cref="T:System.ArgumentNullException">Thrown if <i>image</i> is <b>null</b>.</exception>
+            <remarks>
+            One <see cref="T:Vintasoft.Imaging.VintasoftImage" /> object will be added to this collection if
+            <i>image</i> is not a multipage image.<br />
+            Multiple <see cref="T:Vintasoft.Imaging.VintasoftImage" /> objects will be added to this
+            collection if <i>image</i> is a multipage GIF/TIFF image.
+            </remarks>
+        </member>
+        <member name="T:Vintasoft.Imaging.VintasoftImageGdiExtensions">
+            <summary>
+            Provides GDI extensions for <see cref="T:Vintasoft.Imaging.VintasoftImage" /> class.
+            </summary>
+        </member>
+        <member name="M:Vintasoft.Imaging.VintasoftImageGdiExtensions.Create(System.Drawing.Image,System.Boolean)">
+            <summary>
+            Creates a new instance of the <see cref="T:Vintasoft.Imaging.VintasoftImage" /> class.
+            </summary>
+            <param name="image">The image.</param>
+            <param name="disposeImageAfterUse">A value indicating whether <i>image</i> must be disposed when <see cref="T:Vintasoft.Imaging.VintasoftImage" /> is disposed.</param>
+            <returns>A new instance of <see cref="T:Vintasoft.Imaging.VintasoftImage" /> class.</returns>
+        </member>
+        <member name="M:Vintasoft.Imaging.VintasoftImageGdiExtensions.Draw(Vintasoft.Imaging.VintasoftImage,System.Drawing.Graphics,System.Drawing.Rectangle)">
+            <summary>
+            Draws this <see cref="T:Vintasoft.Imaging.VintasoftImage" /> on specified <see cref="T:System.Drawing.Graphics" /> object.
+            </summary>
+            <param name="image">The image to draw.</param>
+            <param name="graphics">The <see cref="T:System.Drawing.Graphics" /> object, where image must be drawn.</param>
+            <param name="destRect">Rectangle structure that specifies the location
+            and size of the drawn image. The image is scaled to fit the rectangle.</param>
+        </member>
+        <member name="M:Vintasoft.Imaging.VintasoftImageGdiExtensions.Draw(Vintasoft.Imaging.VintasoftImage,System.Drawing.Graphics,System.Drawing.Rectangle,System.Drawing.Rectangle)">
+            <summary>
+            Draws this <see cref="T:Vintasoft.Imaging.VintasoftImage" /> on specified <see cref="T:System.Drawing.Graphics" /> object.
+            </summary>
+            <param name="image">The image to draw.</param>
+            <param name="graphics">The <see cref="T:System.Drawing.Graphics" /> object, where image must be drawn.</param>
+            <param name="destRect">Rectangle structure that specifies the location
+            and size of the drawn image. The image is scaled to fit the rectangle.</param>
+            <param name="srcRect">Rectangle structure that specifies the location
+            and size of the drawn image.</param>
+            <example>This C#/VB.NET code shows how to overlay two images.
+            <code lang="VB.NET">
+            ' open the original image
+            Using originalImage As New Vintasoft.Imaging.VintasoftImage("c:\original-image.tif")
+                ' open the overlay image
+                Using overlayImage As New Vintasoft.Imaging.VintasoftImage("c:\overlay-image.tif")
+                    Dim g As System.Drawing.Graphics = Vintasoft.Imaging.VintasoftImageGdiExtensions.OpenGraphics(originalImage)
+                    ' draw the overlay image on the original image
+                    Vintasoft.Imaging.VintasoftImageGdiExtensions.Draw(overlayImage, g, New System.Drawing.Rectangle(300, 400, 500, 600), New System.Drawing.Rectangle(1000, 200, 1000, 700))
+                End Using
+            
+                ' close Graphics of the overlay image
+                Vintasoft.Imaging.VintasoftImageGdiExtensions.CloseGraphics(originalImage)
+            
+                ' save original image
+                originalImage.Save("c:\processed-image.tif")
+            End Using
+            </code>
+            <code lang="C#">
+            // open the original image
+            using (Vintasoft.Imaging.VintasoftImage originalImage =
+                new Vintasoft.Imaging.VintasoftImage(@"c:\original-image.tif"))
+            {
+                // open the overlay image
+                using (Vintasoft.Imaging.VintasoftImage overlayImage =
+                    new Vintasoft.Imaging.VintasoftImage(@"c:\overlay-image.tif"))
+                {
+                    System.Drawing.Graphics g = Vintasoft.Imaging.VintasoftImageGdiExtensions.OpenGraphics(originalImage);
+                    // draw the overlay image on the original image
+                    Vintasoft.Imaging.VintasoftImageGdiExtensions.Draw(overlayImage, g,
+                                        new System.Drawing.Rectangle(300, 400, 500, 600),
+                                        new System.Drawing.Rectangle(1000, 200, 1000, 700));
+                }
+            
+                // close Graphics of the overlay image
+                Vintasoft.Imaging.VintasoftImageGdiExtensions.CloseGraphics(originalImage);
+            
+                // save original image
+                originalImage.Save(@"c:\processed-image.tif");
+            }
+            </code>
+            </example>
+        </member>
+        <member name="M:Vintasoft.Imaging.VintasoftImageGdiExtensions.Draw(Vintasoft.Imaging.VintasoftImage,System.Drawing.Graphics,System.Drawing.RectangleF)">
+            <summary>
+            Draws this <see cref="T:Vintasoft.Imaging.VintasoftImage" /> on specified <see cref="T:System.Drawing.Graphics" /> object.
+            </summary>
+            <param name="image">The image to draw.</param>
+            <param name="graphics">The <see cref="T:System.Drawing.Graphics" /> object, where image must be drawn.</param>
+            <param name="destRect">Rectangle structure that specifies the location
+            and size of the drawn image. The image is scaled to fit the rectangle.</param>
+        </member>
+        <member name="M:Vintasoft.Imaging.VintasoftImageGdiExtensions.Draw(Vintasoft.Imaging.VintasoftImage,System.Drawing.Graphics,System.Drawing.RectangleF,System.Drawing.RectangleF)">
+            <summary>
+            Draws this <see cref="T:Vintasoft.Imaging.VintasoftImage" /> on specified <see cref="T:System.Drawing.Graphics" /> object.
+            </summary>
+            <param name="image">The image to draw.</param>
+            <param name="graphics">The <see cref="T:System.Drawing.Graphics" /> object, where image must be drawn.</param>
+            <param name="destRect">Rectangle structure that specifies the location
+            and size of the drawn image. The image is scaled to fit the rectangle.</param>
+            <param name="srcRect">Rectangle structure that specifies the location
+            and size of the drawn image.</param>
+            <example>This C#/VB.NET code shows how to overlay two images.
+            <code lang="VB.NET">
+            ' open the original image
+            Using originalImage As New Vintasoft.Imaging.VintasoftImage("c:\original-image.tif")
+                ' open the overlay image
+                Using overlayImage As New Vintasoft.Imaging.VintasoftImage("c:\overlay-image.tif")
+                    Dim g As System.Drawing.Graphics = Vintasoft.Imaging.VintasoftImageGdiExtensions.OpenGraphics(originalImage)
+                    ' draw the overlay image on the original image
+                    Vintasoft.Imaging.VintasoftImageGdiExtensions.Draw(overlayImage, g, New System.Drawing.Rectangle(300, 400, 500, 600), New System.Drawing.Rectangle(1000, 200, 1000, 700))
+                End Using
+            
+                ' close Graphics of the overlay image
+                Vintasoft.Imaging.VintasoftImageGdiExtensions.CloseGraphics(originalImage)
+            
+                ' save original image
+                originalImage.Save("c:\processed-image.tif")
+            End Using
+            </code>
+            <code lang="C#">
+            // open the original image
+            using (Vintasoft.Imaging.VintasoftImage originalImage =
+                new Vintasoft.Imaging.VintasoftImage(@"c:\original-image.tif"))
+            {
+                // open the overlay image
+                using (Vintasoft.Imaging.VintasoftImage overlayImage =
+                    new Vintasoft.Imaging.VintasoftImage(@"c:\overlay-image.tif"))
+                {
+                    System.Drawing.Graphics g = Vintasoft.Imaging.VintasoftImageGdiExtensions.OpenGraphics(originalImage);
+                    // draw the overlay image on the original image
+                    Vintasoft.Imaging.VintasoftImageGdiExtensions.Draw(overlayImage, g,
+                                        new System.Drawing.Rectangle(300, 400, 500, 600),
+                                        new System.Drawing.Rectangle(1000, 200, 1000, 700));
+                }
+            
+                // close Graphics of the overlay image
+                Vintasoft.Imaging.VintasoftImageGdiExtensions.CloseGraphics(originalImage);
+            
+                // save original image
+                originalImage.Save(@"c:\processed-image.tif");
+            }
+            </code>
+            </example>
+        </member>
+        <member name="M:Vintasoft.Imaging.VintasoftImageGdiExtensions.Draw(Vintasoft.Imaging.VintasoftImage,System.Drawing.Graphics,System.Drawing.PointF[])">
+            <summary>
+            Draws this <see cref="T:Vintasoft.Imaging.VintasoftImage" /> on specified <see cref="T:System.Drawing.Graphics" /> object.
+            </summary>
+            <param name="image">The image to draw.</param>
+            <param name="graphics">The <see cref="T:System.Drawing.Graphics" /> object, where image must be drawn.</param>
+            <param name="destPoints">Array of three System.Drawing.PointF structures that
+            define a parallelogram.</param>
+        </member>
+        <member name="M:Vintasoft.Imaging.VintasoftImageGdiExtensions.Draw(Vintasoft.Imaging.VintasoftImage,System.Drawing.Graphics,System.Drawing.PointF[],System.Drawing.RectangleF)">
+            <summary>
+            Draws this <see cref="T:Vintasoft.Imaging.VintasoftImage" /> on specified <see cref="T:System.Drawing.Graphics" /> object.
+            </summary>
+            <param name="image">The image to draw.</param>
+            <param name="graphics">The <see cref="T:System.Drawing.Graphics" /> object, where image must be drawn.</param>
+            <param name="destPoints">Array of three System.Drawing.PointF structures that
+            define a parallelogram.</param>
+            <param name="srcRect">Rectangle structure that specifies the location
+            and size of the drawn image.</param>
+        </member>
+        <member name="M:Vintasoft.Imaging.VintasoftImageGdiExtensions.OpenGraphics(Vintasoft.Imaging.VintasoftImage)">
+            <summary>
+            Opens new <see cref="T:System.Drawing.Graphics" /> for this image.
+            </summary>
+            <param name="image">The image.</param>
+            <returns>New <see cref="T:System.Drawing.Graphics" /> for this image.</returns>
+            <exception cref="T:System.InvalidOperationException">Thrown if <see cref="P:Vintasoft.Imaging.VintasoftImage.IsImageDataLocked" />
+            is set to <b>true</b>.</exception>
+            <exception cref="T:System.InvalidOperationException">Thrown if Graphics object can not be created
+            for image, i.e. image is palette image.</exception>
+            <example>This C#/VB.NET code shows how to overlay two images.
+            <code lang="VB.NET">
+            ' open the original image
+            Using originalImage As New Vintasoft.Imaging.VintasoftImage("c:\original-image.tif")
+                ' open the overlay image
+                Using overlayImage As New Vintasoft.Imaging.VintasoftImage("c:\overlay-image.tif")
+                    Dim g As System.Drawing.Graphics = Vintasoft.Imaging.VintasoftImageGdiExtensions.OpenGraphics(originalImage)
+                    ' draw the overlay image on the original image
+                    Vintasoft.Imaging.VintasoftImageGdiExtensions.Draw(overlayImage, g, New System.Drawing.Rectangle(300, 400, 500, 600), New System.Drawing.Rectangle(1000, 200, 1000, 700))
+                End Using
+            
+                ' close Graphics of the overlay image
+                Vintasoft.Imaging.VintasoftImageGdiExtensions.CloseGraphics(originalImage)
+            
+                ' save original image
+                originalImage.Save("c:\processed-image.tif")
+            End Using
+            </code>
+            <code lang="C#">
+            // open the original image
+            using (Vintasoft.Imaging.VintasoftImage originalImage =
+                new Vintasoft.Imaging.VintasoftImage(@"c:\original-image.tif"))
+            {
+                // open the overlay image
+                using (Vintasoft.Imaging.VintasoftImage overlayImage =
+                    new Vintasoft.Imaging.VintasoftImage(@"c:\overlay-image.tif"))
+                {
+                    System.Drawing.Graphics g = Vintasoft.Imaging.VintasoftImageGdiExtensions.OpenGraphics(originalImage);
+                    // draw the overlay image on the original image
+                    Vintasoft.Imaging.VintasoftImageGdiExtensions.Draw(overlayImage, g,
+                                        new System.Drawing.Rectangle(300, 400, 500, 600),
+                                        new System.Drawing.Rectangle(1000, 200, 1000, 700));
+                }
+            
+                // close Graphics of the overlay image
+                Vintasoft.Imaging.VintasoftImageGdiExtensions.CloseGraphics(originalImage);
+            
+                // save original image
+                originalImage.Save(@"c:\processed-image.tif");
+            }
+            </code>
+            </example>
+            <seealso cref="P:Vintasoft.Imaging.VintasoftImage.IsImageDataLocked" />
+        </member>
+        <member name="M:Vintasoft.Imaging.VintasoftImageGdiExtensions.CloseGraphics(Vintasoft.Imaging.VintasoftImage,System.Boolean)">
+            <summary>
+            Closes the previously opened <see cref="T:System.Drawing.Graphics" /> and generates
+            the <see cref="E:Vintasoft.Imaging.VintasoftImage.Changed" /> event.
+            </summary>
+            <param name="image">The image.</param>
+            <param name="imageChanged">A value indicating whether image is changed.</param>
+            <remarks>
+            This method generates the <see cref="E:Vintasoft.Imaging.VintasoftImage.Changed" /> event if
+            <i>imageChanged</i> is <b>true</b>.
+            </remarks>
+            <example>This C#/VB.NET code shows how to overlay two images.
+            <code lang="VB.NET">
+            ' open the original image
+            Using originalImage As New Vintasoft.Imaging.VintasoftImage("c:\original-image.tif")
+                ' open the overlay image
+                Using overlayImage As New Vintasoft.Imaging.VintasoftImage("c:\overlay-image.tif")
+                    Dim g As System.Drawing.Graphics = Vintasoft.Imaging.VintasoftImageGdiExtensions.OpenGraphics(originalImage)
+                    ' draw the overlay image on the original image
+                    Vintasoft.Imaging.VintasoftImageGdiExtensions.Draw(overlayImage, g, New System.Drawing.Rectangle(300, 400, 500, 600), New System.Drawing.Rectangle(1000, 200, 1000, 700))
+                End Using
+            
+                ' close Graphics of the overlay image
+                Vintasoft.Imaging.VintasoftImageGdiExtensions.CloseGraphics(originalImage)
+            
+                ' save original image
+                originalImage.Save("c:\processed-image.tif")
+            End Using
+            </code>
+            <code lang="C#">
+            // open the original image
+            using (Vintasoft.Imaging.VintasoftImage originalImage =
+                new Vintasoft.Imaging.VintasoftImage(@"c:\original-image.tif"))
+            {
+                // open the overlay image
+                using (Vintasoft.Imaging.VintasoftImage overlayImage =
+                    new Vintasoft.Imaging.VintasoftImage(@"c:\overlay-image.tif"))
+                {
+                    System.Drawing.Graphics g = Vintasoft.Imaging.VintasoftImageGdiExtensions.OpenGraphics(originalImage);
+                    // draw the overlay image on the original image
+                    Vintasoft.Imaging.VintasoftImageGdiExtensions.Draw(overlayImage, g,
+                                        new System.Drawing.Rectangle(300, 400, 500, 600),
+                                        new System.Drawing.Rectangle(1000, 200, 1000, 700));
+                }
+            
+                // close Graphics of the overlay image
+                Vintasoft.Imaging.VintasoftImageGdiExtensions.CloseGraphics(originalImage);
+            
+                // save original image
+                originalImage.Save(@"c:\processed-image.tif");
+            }
+            </code>
+            </example>
+        </member>
+        <member name="M:Vintasoft.Imaging.VintasoftImageGdiExtensions.CloseGraphics(Vintasoft.Imaging.VintasoftImage)">
+            <summary>
+            Closes the previously opened <see cref="T:System.Drawing.Graphics" /> and generates
+            the <see cref="E:Vintasoft.Imaging.VintasoftImage.Changed" /> event.
+            </summary>
+            <param name="image">The image.</param>
+            <remarks>
+            This method generates the <see cref="E:Vintasoft.Imaging.VintasoftImage.Changed" /> event.
+            </remarks>
+            <example>This C#/VB.NET code shows how to overlay two images.
+            <code lang="VB.NET">
+            ' open the original image
+            Using originalImage As New Vintasoft.Imaging.VintasoftImage("c:\original-image.tif")
+                ' open the overlay image
+                Using overlayImage As New Vintasoft.Imaging.VintasoftImage("c:\overlay-image.tif")
+                    Dim g As System.Drawing.Graphics = Vintasoft.Imaging.VintasoftImageGdiExtensions.OpenGraphics(originalImage)
+                    ' draw the overlay image on the original image
+                    Vintasoft.Imaging.VintasoftImageGdiExtensions.Draw(overlayImage, g, New System.Drawing.Rectangle(300, 400, 500, 600), New System.Drawing.Rectangle(1000, 200, 1000, 700))
+                End Using
+            
+                ' close Graphics of the overlay image
+                Vintasoft.Imaging.VintasoftImageGdiExtensions.CloseGraphics(originalImage)
+            
+                ' save original image
+                originalImage.Save("c:\processed-image.tif")
+            End Using
+            </code>
+            <code lang="C#">
+            // open the original image
+            using (Vintasoft.Imaging.VintasoftImage originalImage =
+                new Vintasoft.Imaging.VintasoftImage(@"c:\original-image.tif"))
+            {
+                // open the overlay image
+                using (Vintasoft.Imaging.VintasoftImage overlayImage =
+                    new Vintasoft.Imaging.VintasoftImage(@"c:\overlay-image.tif"))
+                {
+                    System.Drawing.Graphics g = Vintasoft.Imaging.VintasoftImageGdiExtensions.OpenGraphics(originalImage);
+                    // draw the overlay image on the original image
+                    Vintasoft.Imaging.VintasoftImageGdiExtensions.Draw(overlayImage, g,
+                                        new System.Drawing.Rectangle(300, 400, 500, 600),
+                                        new System.Drawing.Rectangle(1000, 200, 1000, 700));
+                }
+            
+                // close Graphics of the overlay image
+                Vintasoft.Imaging.VintasoftImageGdiExtensions.CloseGraphics(originalImage);
+            
+                // save original image
+                originalImage.Save(@"c:\processed-image.tif");
+            }
+            </code>
+            </example>
+        </member>
+        <member name="M:Vintasoft.Imaging.VintasoftImageGdiExtensions.GetAsBitmap(Vintasoft.Imaging.VintasoftImage)">
+            <summary>
+            Returns the <see cref="T:System.Drawing.Bitmap" /> object associated with
+            this <see cref="T:Vintasoft.Imaging.VintasoftImage" /> object.
+            </summary>
+            <param name="image">The image.</param>
+            <returns>The <see cref="T:System.Drawing.Image" /> object.</returns>
+            <example>This C#/VB.NET code shows how to load image from disk, copy image to clipboard,
+            process image in external image editor, copy image back from the clipboard and
+            save processed image.
+            <code lang="VB.NET">
+            ' load image from file
+            Using image As New Vintasoft.Imaging.VintasoftImage("c:\original-image.tif")
+                ' copy image to clipboard
+                System.Windows.Forms.Clipboard.SetImage(Vintasoft.Imaging.VintasoftImageGdiExtensions.GetAsBitmap(image))
+            
+                ' process image in external image editor and place it back to the clipboard
+                ' ...
+            
+                ' get image from the clipboard
+                image.SetImage(Vintasoft.Imaging.VintasoftImageGdiExtensions.Create(System.Windows.Forms.Clipboard.GetImage(), True))
+            
+                ' save image to the file
+                image.Save("c:\processed-image.jpg")
+            End Using
+            </code>
+            <code lang="C#">
+            // load image from file
+            using (Vintasoft.Imaging.VintasoftImage image =
+                new Vintasoft.Imaging.VintasoftImage(@"c:\original-image.tif"))
+            {
+                // copy image to clipboard
+                System.Windows.Forms.Clipboard.SetImage(Vintasoft.Imaging.VintasoftImageGdiExtensions.GetAsBitmap(image));
+            
+                // process image in external image editor and place it back to the clipboard
+                // ...
+            
+                // get image from the clipboard
+                image.SetImage(Vintasoft.Imaging.VintasoftImageGdiExtensions.Create(
+                    System.Windows.Forms.Clipboard.GetImage(), true));
+            
+                // save image to the file
+                image.Save(@"c:\processed-image.jpg");
+            }
+            </code>
+            </example>
+        </member>
+        <member name="M:Vintasoft.Imaging.VintasoftImageGdiExtensions.GetAsBitmap(Vintasoft.Imaging.VintasoftImage,System.EventHandler{Vintasoft.Imaging.ProgressEventArgs})">
+            <summary>
+            Returns the <see cref="T:System.Drawing.Image" /> object associated with
+            this <see cref="T:Vintasoft.Imaging.VintasoftImage" /> object.
+            </summary>
+            <param name="image">The image.</param>
+            <param name="loadingProgress">Delegate of the thumbnail loading progress.
+            Can be set to <b>null</b> (<b>Nothing</b> in Visual Basic).</param>
+            <returns>The <see cref="T:System.Drawing.Image" /> object.</returns>
+            <example>This C#/VB.NET code shows how to load image from disk, copy image to clipboard,
+            process image in external image editor, copy image back from the clipboard and
+            save processed image.
+            <code lang="VB.NET">
+            ' load image from file
+            Using image As New Vintasoft.Imaging.VintasoftImage("c:\original-image.tif")
+                ' copy image to clipboard
+                System.Windows.Forms.Clipboard.SetImage(Vintasoft.Imaging.VintasoftImageGdiExtensions.GetAsBitmap(image))
+            
+                ' process image in external image editor and place it back to the clipboard
+                ' ...
+            
+                ' get image from the clipboard
+                image.SetImage(Vintasoft.Imaging.VintasoftImageGdiExtensions.Create(System.Windows.Forms.Clipboard.GetImage(), True))
+            
+                ' save image to the file
+                image.Save("c:\processed-image.jpg")
+            End Using
+            </code>
+            <code lang="C#">
+            // load image from file
+            using (Vintasoft.Imaging.VintasoftImage image =
+                new Vintasoft.Imaging.VintasoftImage(@"c:\original-image.tif"))
+            {
+                // copy image to clipboard
+                System.Windows.Forms.Clipboard.SetImage(Vintasoft.Imaging.VintasoftImageGdiExtensions.GetAsBitmap(image));
+            
+                // process image in external image editor and place it back to the clipboard
+                // ...
+            
+                // get image from the clipboard
+                image.SetImage(Vintasoft.Imaging.VintasoftImageGdiExtensions.Create(
+                    System.Windows.Forms.Clipboard.GetImage(), true));
+            
+                // save image to the file
+                image.Save(@"c:\processed-image.jpg");
+            }
+            </code>
+            </example>
+        </member>
+        <member name="M:Vintasoft.Imaging.VintasoftImageGdiExtensions.SetImage(Vintasoft.Imaging.VintasoftImage,System.Drawing.Image,System.Boolean)">
+            <summary>
+            Sets the <see cref="T:System.Drawing.Image" /> object associated with
+            this <see cref="T:Vintasoft.Imaging.VintasoftImage" /> object.
+            </summary>
+            <param name="image">The image.</param>
+            <param name="bitmap">The <see cref="T:System.Drawing.Image" /> object.</param>
+            <param name="disposeBitmapAfterUse">A value indicating whether <see cref="T:System.Drawing.Image" /> object must be
+            disposed after use.</param>
+            <exception cref="T:System.ArgumentNullException">Thrown if <i>bitmap</i> is <b>null</b>.</exception>
+            <exception cref="T:System.InvalidOperationException">Thrown if <see cref="P:Vintasoft.Imaging.VintasoftImage.IsImageDataLocked" />
+            is set to <b>true</b>.</exception>
+            <example>This C#/VB.NET code shows how to load image from disk, copy image to clipboard,
+            process image in external image editor, copy image back from the clipboard and
+            save processed image.
+            <code lang="VB.NET">
+            ' load image from file
+            Using image As New Vintasoft.Imaging.VintasoftImage("c:\original-image.tif")
+                ' copy image to clipboard
+                System.Windows.Forms.Clipboard.SetImage(Vintasoft.Imaging.VintasoftImageGdiExtensions.GetAsBitmap(image))
+            
+                ' process image in external image editor and place it back to the clipboard
+                ' ...
+            
+                ' get image from the clipboard
+                image.SetImage(Vintasoft.Imaging.VintasoftImageGdiExtensions.Create(System.Windows.Forms.Clipboard.GetImage(), True))
+            
+                ' save image to the file
+                image.Save("c:\processed-image.jpg")
+            End Using
+            </code>
+            <code lang="C#">
+            // load image from file
+            using (Vintasoft.Imaging.VintasoftImage image =
+                new Vintasoft.Imaging.VintasoftImage(@"c:\original-image.tif"))
+            {
+                // copy image to clipboard
+                System.Windows.Forms.Clipboard.SetImage(Vintasoft.Imaging.VintasoftImageGdiExtensions.GetAsBitmap(image));
+            
+                // process image in external image editor and place it back to the clipboard
+                // ...
+            
+                // get image from the clipboard
+                image.SetImage(Vintasoft.Imaging.VintasoftImageGdiExtensions.Create(
+                    System.Windows.Forms.Clipboard.GetImage(), true));
+            
+                // save image to the file
+                image.Save(@"c:\processed-image.jpg");
+            }
+            </code>
+            </example>
+            <remarks>
+            <i>Bitmap</i> object must not be disposed during lifetime of
+            this <see cref="T:Vintasoft.Imaging.VintasoftImage" /> object.
+            </remarks>
+            <seealso cref="M:Vintasoft.Imaging.VintasoftImage.SetImage(Vintasoft.Imaging.VintasoftImage)" />
+            <seealso cref="P:Vintasoft.Imaging.VintasoftImage.IsImageDataLocked" />
+        </member>
+    </members>
+</doc>
